@@ -2,14 +2,20 @@
   <div class="Index">
     <!-- 导航栏 -->
     <div class="navBar">
-      <div class="bar">
+      <div class="bar clearfix">
         <div class="logo">
           <img src="static/images/logo.jpg" />
         </div>
         <div class="nav">
-          <ul>
+          <ul class="clearfix">
             <li>
               <router-link to="/intro" active-class="selected">趣活介绍</router-link>
+              <!-- <ul>
+                <li><router-link to="/" active-class="selected">关于趣活</router-link></li>
+                <li><router-link to="/" active-class="selected">公司架构</router-link></li>
+                <li><router-link to="/" active-class="selected">关于趣活</router-link></li>
+                <li><router-link to="/" active-class="selected">关于趣活</router-link></li>
+              </ul> -->
             </li>
             <li><router-link to="/clients" active-class="selected">趣活客户</router-link></li>
             <li><router-link to="/case" active-class="selected">精品案例</router-link></li>
@@ -50,6 +56,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
+@heaH: 130px;
 .Index{
   .selected{
     color: #f39800;
@@ -66,7 +73,7 @@ export default {
     .bar{
       width: 1200px;
       margin: 0 auto;
-      .logo, .nav{
+      .logo{
         height: 130px;
         line-height: 130px;
       }
@@ -75,16 +82,25 @@ export default {
         img{
           display: inline-block;
           width: 125px;
-          height: 65px;
+          // height: 65px;
+          height: auto;
+          vertical-align: middle;
         }
       }
       .nav{
         float: right;
+        height:@heaH;
         ul{
           li{
             float: left;
             font-size: 18px;
             font-weight: bold;
+            height: @heaH;
+            line-height:  @heaH;
+            padding: 0 20px;
+            a{
+              
+            }
           }
         }
       }
