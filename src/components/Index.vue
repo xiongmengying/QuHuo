@@ -82,7 +82,7 @@ export default {
         float: right;
         ul{
           li{
-            float: right;
+            float: left;
             font-size: 18px;
             font-weight: bold;
           }

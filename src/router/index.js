@@ -1,14 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import About from '@/components/About'
-import Architecture from '@/components/Architecture'
-import Business from '@/components/Business'
-import Case from '@/components/Case'
-import Clients from '@/components/Clients'
-import Contact from '@/components/Contact'
-import Index from '@/components/Index'
-import Intro from '@/components/Intro'
-import Resource from '@/components/Resource'
 
 Vue.use(Router)
 
@@ -17,47 +8,47 @@ export default new Router({
     {
       path: '/',
       name: 'Index',
-      component: Index,
+      component: resolve => require(['@/components/Index'], resolve),
       children: [
         {
           path: '/about',
           name: 'About',
-          component: About
+          component: resolve => require(['@/components/About'], resolve)
         },
         {
           path: '/architecture',
           name: 'Architecture',
-          component: Architecture
+          component: resolve => require(['@/components/Architecture'], resolve)
         },
         {
           path: '/business',
           name: 'Business',
-          component: Business
+          component: resolve => require(['@/components/Business'], resolve)
         },
         {
           path: '/case',
           name: 'Case',
-          component: Case
+          component: resolve => require(['@/components/Case'], resolve)
         },
         {
           path: '/clients',
           name: 'Clients',
-          component: Clients
+          component: resolve => require(['@/components/Clients'], resolve)
         },
         {
           path: '/contact',
           name: 'Contact',
-          component: Contact
+          component: resolve => require(['@/components/Contact'], resolve)
         },
         {
           path: '/intro',
           name: 'Intro',
-          component: Intro
+          component: resolve => require(['@/components/Intro'], resolve)
         },
         {
           path: '/resource',
           name: 'Resource',
-          component: Resource
+          component: resolve => require(['@/components/Resource'], resolve)
         },
       ]
     }
