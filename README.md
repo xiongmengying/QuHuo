@@ -1,6 +1,6 @@
 # myvue
 
-> A Vue.js project
+> Qu Huo Project
 
 ## Build Setup
 

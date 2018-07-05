@@ -4,7 +4,7 @@
     <div class="navBar">
       <div class="bar">
         <div class="logo">
-          <img src="static/images/logo.jpg" />
+          <img src="static/images/logo.jpg" @click="this.$router.repalce('/Index')"/>
         </div>
         <div class="nav">
           <ul>
@@ -13,7 +13,7 @@
             </li>
             <li><router-link to="/clients" active-class="selected">趣活客户</router-link></li>
             <li><router-link to="/case" active-class="selected">精品案例</router-link></li>
-            <li><router-link to="/contact" active-class="selected">联系我们</router-link></li>
+            <li style="padding: 0 0 0 45px;"><router-link to="/contact" active-class="selected">联系我们</router-link></li>
           </ul>
         </div>
       </div>
@@ -51,6 +51,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 .Index{
+  a{
+    color: #333333;
+  }
   .selected{
     color: #f39800;
   }
@@ -76,6 +79,7 @@ export default {
           display: inline-block;
           width: 125px;
           height: 65px;
+          cursor: pointer;
         }
       }
       .nav{
@@ -83,6 +87,7 @@ export default {
         ul{
           li{
             float: left;
+            padding: 0 45px;
             font-size: 18px;
             font-weight: bold;
           }
