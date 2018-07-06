@@ -8,11 +8,11 @@
         </div>
         <div class="nav">
           <ul class="clearfix">
-            <li>
+            <li @mouseover="secondShow = true" @mouseout="secondShow = false">
               <router-link to="/intro" active-class="selected">趣活介绍</router-link>
-              <ul>
-                <li><router-link to="/" active-class="selected">关于趣活</router-link></li>
-                <li><router-link to="/" active-class="selected">公司架构</router-link></li>
+              <ul class="second" @mouseover="secondShow = true" @mouseout="secondShow = false" v-show="secondShow">
+                <li><router-link to="/about" active-class="selected">关于趣活</router-link></li>
+                <li><router-link to="/architecture" active-class="selected">公司架构</router-link></li>
                 <li><router-link to="/" active-class="selected">关于趣活</router-link></li>
                 <li><router-link to="/" active-class="selected">关于趣活</router-link></li>
               </ul>
@@ -42,14 +42,15 @@ export default {
   name: 'Index',
   data () {
     return {
-
+      secondShow: false
     }
   },
   mounted() {
     this.$router.push('intro');
   },
   methods: {
-    
+  },
+  computed: {
   }
 }
 </script>
@@ -93,6 +94,7 @@ export default {
         float: right;
         height:@heaH;
         ul{
+          position: relative;
           li{
             float: left;
             padding: 0 45px;
@@ -101,6 +103,22 @@ export default {
             height: @heaH;
             line-height:  @heaH;
             padding: 0 20px;
+            .second{
+              z-index: 999;
+              background-color: #ffffff;
+              border-left: 1px solid #efefef;
+              border-bottom: 1px solid #efefef;
+              border-right: 1px solid #efefef;
+              position: absolute;
+              left: 0;
+              bottom: -125px;
+              width: 115px;
+              height: auto;
+              li{
+                height: 40px;
+                line-height: 40px;
+              }
+            }
           }
         }
       }
