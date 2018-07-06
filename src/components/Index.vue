@@ -19,7 +19,7 @@
             </li>
             <li><router-link to="/clients" active-class="selected">趣活客户</router-link></li>
             <li><router-link to="/case" active-class="selected">精品案例</router-link></li>
-            <li style="padding: 0 0 0 45px;"><router-link to="/contact" active-class="selected">联系我们</router-link></li>
+            <li style="padding: 0 0 0 20px;"><router-link to="/contact" active-class="selected">联系我们</router-link></li>
           </ul>
         </div>
       </div>
@@ -85,7 +85,6 @@ export default {
         img{
           display: inline-block;
           width: 125px;
-          // height: 65px;
           height: auto;
           vertical-align: middle;
         }
@@ -102,9 +101,6 @@ export default {
             height: @heaH;
             line-height:  @heaH;
             padding: 0 20px;
-            a{
-              
-            }
           }
         }
       }
@@ -117,7 +113,7 @@ export default {
   // 底部开始
   .bottom{
     width: 100%;
-    height: 135px;
+    height: 134px;
     border-top: 1px solid #f39a00;
     background-color: #ffd13d;
     font-size: 14px;
