@@ -10,12 +10,12 @@
           <ul class="clearfix">
             <li>
               <router-link to="/intro" active-class="selected">趣活介绍</router-link>
-              <!-- <ul>
+              <ul>
                 <li><router-link to="/" active-class="selected">关于趣活</router-link></li>
                 <li><router-link to="/" active-class="selected">公司架构</router-link></li>
                 <li><router-link to="/" active-class="selected">关于趣活</router-link></li>
                 <li><router-link to="/" active-class="selected">关于趣活</router-link></li>
-              </ul> -->
+              </ul>
             </li>
             <li><router-link to="/clients" active-class="selected">趣活客户</router-link></li>
             <li><router-link to="/case" active-class="selected">精品案例</router-link></li>

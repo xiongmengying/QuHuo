@@ -12,6 +12,7 @@
 .Intro{
   position: relative;
   width: 100%;
+  padding-bottom: 20px;
   height: 709px;
   .content{
     width: auto;
