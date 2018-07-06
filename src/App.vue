@@ -50,6 +50,15 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
         outline: none;
     }
 }
+.clearfix:after {
+  content: "020";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
 
 img:not([src]) { 
     visibility: hidden;
