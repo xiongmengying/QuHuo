@@ -3,13 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import { Carousel, CarouselItem } from 'element-ui';
 
 Vue.config.productionTip = false
 
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-Vue.use(ElementUI);
-
+Vue.use(Carousel)
+Vue.use(CarouselItem)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
