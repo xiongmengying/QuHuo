@@ -21,8 +21,8 @@
     z-index: 99;
     text-align: center;
     overflow: hidden;
-    animation:myfirst 3s;
-    -webkit-animation:myfirst 3s;
+    animation:myfirst 2s;
+    -webkit-animation:myfirst 2s;
     animation-fill-mode: forwards;/*当动画完成时，动画会停留在最后一帧。*/
     @-webkit-keyframes myfirst {
       0%   { bottom:0%; display: none;}

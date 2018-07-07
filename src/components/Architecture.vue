@@ -3,44 +3,57 @@
     <div class="content">
       <p class="title">服务范围</p>
       <p class="desc">为品牌提供一站式的游戏/电竞人群传播解决方案</p>
-      <ul class="step">
-        <li>
-          <div></div>
-          <span>需 求 拆 解</span>
-        </li>
-        <li>
-          <div></div>
-          <span>用 户 分 析</span>
-        </li>
-        <li>
-          <div></div>
-          <span>定 制 方 案</span>
-        </li>
-        <li style="width: 200px;height: 200px;">
-          <div></div>
-          <span>执 行 运 营</span>
-        </li>
-        <li>
-          <div></div>
-          <span>达 成 目 的</span>
-        </li>
-      </ul>
+      <transition name="move">
+        <ul class="step" v-show="isShow">
+          <li>
+            <div></div>
+            <span>需 求 拆 解</span>
+          </li>
+          <li>
+            <div></div>
+            <span>用 户 分 析</span>
+          </li>
+          <li>
+            <div></div>
+            <span>定 制 方 案</span>
+          </li>
+          <li style="width: 200px;height: 200px;">
+            <div></div>
+            <span>执 行 运 营</span>
+          </li>
+          <li>
+            <div></div>
+            <span>达 成 目 的</span>
+          </li>
+        </ul>
+      </transition>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'Architecture',
-    data() {
-        return {
-        }
+  name: 'Architecture',
+  data() {
+    return {
+      isShow: false
     }
+  },
+  mounted() {
+    this.isShow = true;
+  }
 }
 </script>
 
 <style lang="less" scoped>
 .Architecture{
+  .move-enter-active{
+    transition: all 0.5s linear;
+    transform: translate3d(0, 0, 0);
+  }
+  .move-enter{
+    transform: translate3d(100%, 0, 0);
+  }
   min-width: 1200px;
   position: relative;
   width: 100%;
