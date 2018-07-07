@@ -51,7 +51,7 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
     }
 }
 .clearfix:after {
-  content: "020";
+  content: "";
   display: block;
   height: 0;
   clear: both;
