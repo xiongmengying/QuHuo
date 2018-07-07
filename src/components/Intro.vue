@@ -14,11 +14,20 @@
   width: 100%;
   height: 709px;
   .content{
+    position: absolute;
+    left: 26%;
     width: auto;
     padding-top: 230px;
     z-index: 99;
     text-align: center;
-    margin: 0 auto;
+    overflow: hidden;
+    animation:myfirst 3s;
+    -webkit-animation:myfirst 3s;
+    animation-fill-mode: forwards;/*当动画完成时，动画会停留在最后一帧。*/
+    @-webkit-keyframes myfirst {
+      0%   { bottom:0%; display: none;}
+      100% { bottom:30%; display: block;}
+    }
     p:nth-child(1){
       font-family: '宋体';
       font-size: 60px;

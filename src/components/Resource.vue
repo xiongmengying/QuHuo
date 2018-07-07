@@ -7,6 +7,10 @@
 </template>
 
 <script>
+// require('echarts/lib/chart/pie');
+// require('echarts/lib/component/tooltip');
+// require('echarts/lib/component/title');
+
 export default {
     name: 'Resource',
     data() {
