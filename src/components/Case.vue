@@ -1,24 +1,34 @@
 <template>
-  <div class="Case" style="background: url('static/images/back/case.jpg') no-repeat center center;background-size: cover;">
-    <div class="content">
-      <p class="title">精品案例</p>
-      <transition name="fade">
-        <ul class="list" v-show="liShow">
-            <li v-for="(item ,index) in imgLits" :key="index" @mouseover="item.isShow = true"
-            @mouseout="item.isShow = false" :style="`left: ${item.left};top: ${item.top};`">
-                <img :src="`static/images/business/${index + 1}.jpg`"  v-show="!item.isShow"/>
-                <div class="detail" v-show="item.isShow">
-                    <p>{{item.detail1}}</p>
-                    <p>{{item.detail2}}</p>    
-                </div>    
-            </li>
-        </ul>
-      </transition>
+  <div class="swiper-container Case" style="background: url('static/images/back/case.jpg') no-repeat center center;background-size: cover;">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <Intro></Intro>
+        </div>
+        <div class="swiper-slide">
+          <div class="content">
+            <p class="title">精品案例</p>
+              <transition name="fade">
+                <ul class="list" v-show="liShow">
+                    <li v-for="(item ,index) in imgLits" :key="index" @mouseover="item.isShow = true"
+                    @mouseout="item.isShow = false" :style="`left: ${item.left};top: ${item.top};`">
+                        <img :src="`static/images/business/${index + 1}.jpg`"  v-show="!item.isShow"/>
+                        <div class="detail" v-show="item.isShow">
+                            <p>{{item.detail1}}</p>
+                            <p>{{item.detail2}}</p>    
+                        </div>    
+                    </li>
+                </ul>
+              </transition>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import Swiper from 'swiper';
+
 export default {
   name: 'Case',
   data() {
@@ -38,7 +48,12 @@ export default {
   },
   mounted() {
     this.liShow = true;
-  }
+    new Swiper ('.swiper-container', {
+      initialSlide: this.initialSlide,
+      mousewheel: true,
+      direction: 'vertical',
+    })
+  },
 }
 </script>
 
@@ -46,7 +61,7 @@ export default {
 .Case{
   position: relative;
   width: 100%;
-  height: 709px;
+  height: 689px;
   .fade-enter-active, .fade-leave-active {
     transition: opacity 1s
   }

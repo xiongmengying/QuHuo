@@ -1,29 +1,54 @@
 <template>
-  <div class="Intro" style="background: url('static/images/back/contact.jpg') no-repeat center center;background-size: cover;">
-    <div class="content">
-      <ul>
-        <li style="background: url('static/images/back/contact-1.jpg') no-repeat center center;background-size: cover;">
-          <p>上海</p>
-          <p>邮箱：william.zhang@lfalways.com</p>
-        </li>
-        <li style="background: url('static/images/back/contact-2.jpg') no-repeat center center;background-size: cover;">
-          <p>深圳</p>
-          <p>邮箱：hannah.han@lfalways.com</p>
-        </li>
-        <li style="background: url('static/images/back/contact-3.jpg') no-repeat center center;background-size: cover;">
-          <p>北京</p>
-          <p>邮箱：dana.xie@lfalways.com</p>
-        </li>
-      </ul>
+  <div class="swiper-container Intro" style="background: url('static/images/back/contact.jpg') no-repeat center center;background-size: cover;">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <Intro></Intro>
+      </div>
+      <div class="swiper-slide">
+        <div class="content">
+          <transition name="fade">
+            <ul>
+              <li style="background: url('static/images/back/contact-1.jpg') no-repeat center center;background-size: cover;">
+                <p>上海</p>
+                <p>邮箱：william.zhang@lfalways.com</p>
+              </li>
+              <li style="background: url('static/images/back/contact-2.jpg') no-repeat center center;background-size: cover;">
+                <p>深圳</p>
+                <p>邮箱：hannah.han@lfalways.com</p>
+              </li>
+              <li style="background: url('static/images/back/contact-3.jpg') no-repeat center center;background-size: cover;">
+                <p>北京</p>
+                <p>邮箱：dana.xie@lfalways.com</p>
+              </li>
+            </ul>
+          </transition>
+        </div>
+      </div>
     </div>
   </div>
 </template>
+
+<script>
+import Swiper from 'swiper';
+
+export default {
+  name: 'contact',
+  mounted() {
+    this.liShow = true;
+    new Swiper ('.swiper-container', {
+      initialSlide: this.initialSlide,
+      mousewheel: true,
+      direction: 'vertical',
+    })
+  }
+}
+</script>
 
 <style lang="less" scoped>
 .Intro{
   position: relative;
   width: 100%;
-  height: 709px;
+  height: 689px;
   .content{
     width: auto;
     padding-top: 150px;
@@ -35,7 +60,7 @@
       height: 420px;
       li{
         display: inline-block;
-        width: 600px;
+        width: 30%;
         height: 420px;
         padding-top: 160px;
         background-color: red;

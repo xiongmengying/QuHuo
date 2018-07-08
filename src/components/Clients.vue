@@ -1,35 +1,44 @@
 <template>
-  <div class="Clients" style="background: url('static/images/back/clients.jpg') no-repeat center center;background-size: cover;">
-    <p class="title">服务过的客户</p>
-    <el-carousel class="carousel" height="400px">
-      <el-carousel-item  class="first">
-        <p>IT客户</p>
-        <div class="grass">
-          <div v-for="(item, index) in ITLists" :key="index" :title="item.name">
-            <img :src="item.imgUrl" alt="">
-          </div>
-        </div>
-      </el-carousel-item>
-      <el-carousel-item class="second">
-        <p>快销客户</p>
-        <div class="grass">
-          <div v-for="(item, index) in fastLists" :key="index" :title="item.name">
-            <img :src="item.imgUrl" alt="">
-          </div>
-        </div>
-      </el-carousel-item>
-      <el-carousel-item class="third">
-        <p>其他客户</p>
-        <div class="grass">
-          <div v-for="(item, index) in otherLists" :key="index" :title="item.name">
-            <img :src="item.imgUrl" alt="">
-          </div>
-        </div>
-      </el-carousel-item>
-    </el-carousel>
+  <div class="swiper-container Clients" style="background: url('static/images/back/clients.jpg') no-repeat center center;background-size: cover;">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <Intro></Intro>
+      </div>
+      <div class="swiper-slide">
+        <p class="title">服务过的客户</p>
+        <el-carousel class="carousel" height="400px">
+          <el-carousel-item  class="first">
+            <p>IT客户</p>
+            <div class="grass">
+              <div v-for="(item, index) in ITLists" :key="index" :title="item.name">
+                <img :src="item.imgUrl" alt="">
+              </div>
+            </div>
+          </el-carousel-item>
+          <el-carousel-item class="second">
+            <p>快销客户</p>
+            <div class="grass">
+              <div v-for="(item, index) in fastLists" :key="index" :title="item.name">
+                <img :src="item.imgUrl" alt="">
+              </div>
+            </div>
+          </el-carousel-item>
+          <el-carousel-item class="third">
+            <p>其他客户</p>
+            <div class="grass">
+              <div v-for="(item, index) in otherLists" :key="index" :title="item.name">
+                <img :src="item.imgUrl" alt="">
+              </div>
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+    </div>
   </div>
 </template>
 <script>
+import Swiper from 'swiper';
+
 export default {
   name: 'Clients',
   data() {
@@ -67,16 +76,27 @@ export default {
         { name: '欧莱雅 ', imgUrl: 'static/images/clients/OTHER/oulaiya.png' }
       ]
     }
-  }
+  },
+  mounted() {
+    new Swiper ('.swiper-container', {
+      initialSlide: this.initialSlide,
+      mousewheel: true,
+      direction: 'vertical',
+    })
+  },
 }
 </script>
 
 <style lang="less" scoped>
 .Clients{
   width: 100%;
-  height: 709px;
-  padding-top: 100px;
+  height: 689px;
   text-align: center;
+  .swiper-container {
+    width: 100%;
+    height: 689px;
+    margin-bottom: 20px;
+  }
   .title{
     font-size: 48px;
     font-weight: bold;

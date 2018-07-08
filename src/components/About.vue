@@ -103,8 +103,8 @@ export default {
     .breif{
       li{
         display: inline-block;
-        width: 490px;
-        height: 465px;
+        width: 30%;
+        height: 425px;
         margin-top: 25px;
         background-color: rgba(0, 0, 0, .6);
         border-radius: 15px;

@@ -1,5 +1,5 @@
 <template>
-  <div class="swiper-container" style="background: url('static/images/back/intro1.jpg') no-repeat center center;background-size: cover;">
+  <div class="swiper-container" style="background: url('static/images/back/intro.jpg') no-repeat center center;background-size: cover;">
     <div class="swiper-wrapper">
         <div id="Intro" class="swiper-slide">
           <Intro></Intro>
@@ -11,10 +11,10 @@
           <Architecture></Architecture>
         </div>
         <div id="Resource" class="swiper-slide">
-          <Resource></Resource>
+          <Business></Business>
         </div>
         <div id="Business" class="swiper-slide">
-          <Business></Business>
+          <Resource></Resource>
         </div>
     </div>
     <!-- 如果需要分页器 -->
@@ -84,6 +84,7 @@ export default {
 <style>
 .swiper-container {
   width: 100%;
-  height: 709px;
+  height: 689px;
+  margin-bottom: 20px;
 }
 </style>
