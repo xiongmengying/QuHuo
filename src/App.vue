@@ -63,7 +63,4 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
 img:not([src]) { 
     visibility: hidden;
 }
-img {
-  pointer-events: none;
-}
 </style>

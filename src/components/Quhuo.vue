@@ -11,10 +11,10 @@
           <Architecture></Architecture>
         </div>
         <div id="Resource" class="swiper-slide">
-          <Business></Business>
+          <Resource></Resource>
         </div>
         <div id="Business" class="swiper-slide">
-          <Resource></Resource>
+          <Business></Business>
         </div>
     </div>
     <!-- 如果需要分页器 -->
