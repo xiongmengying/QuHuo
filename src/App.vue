@@ -57,4 +57,7 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
 img:not([src]) { 
     visibility: hidden;
 }
+body{
+  height:100%;
+}
 </style>

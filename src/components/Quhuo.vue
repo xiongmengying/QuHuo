@@ -41,6 +41,21 @@ export default {
   },
   mounted() {
     this.Swiper();
+    this.mySwiper.slideTo(this.queryList.indexOf(this.$route.query.from) +1, 1000, false);
+    // this.mySwiper = new Swiper ('.swiper-container', {
+    //   initialSlide: this.initialSlide,
+    //   mousewheel: {
+    //     releaseOnEdges: true, // 当Swiper处于边缘位置时，Swiper释放鼠标滚轮事件，鼠标可以控制页面滚动
+    //   },
+    //   direction: 'vertical',
+    //   // 如果需要分页器
+    //   pagination: '.swiper-pagination',
+    //   // 如果需要前进后退按钮
+    //   // nextButton: '.swiper-button-next',
+    //   // prevButton: '.swiper-button-prev',
+    //   // 如果需要滚动条
+    //   scrollbar: {el: '.swiper-scrollbar',hide:true},
+    // })
   },
   watch: {
     $route(to, from) {
@@ -72,7 +87,7 @@ export default {
 <style>
 .swiper-container {
   width: 100%;
-  height: 689px;
+  height: 100%;
   margin-bottom: 20px;
 }
 </style>
