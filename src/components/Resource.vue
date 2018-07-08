@@ -84,7 +84,7 @@ export default {
     }
     .detail{
       width: 98%;
-      height:90%;
+      height: 75%;
       margin: 0 1%;
       text-align: center;
       // margin-top: 100px;

@@ -24,12 +24,12 @@ export default {
     return {
       isShow: false,
       list: [
-        {name: '内容', left: '42%', top: '23%', title: '资深团队，专业内容', titleShow: false},
-        {name: '设计', left: '66%', top: '37%', title: '专注专向，追求真美', titleShow: false},
-        {name: '运营', left: '67%', top: '63%', title: '活动组织、赛事管理', titleShow: false},
-        {name: '策划', left: '42%', top: '80%', title: '客户至上，定制方案', titleShow: false},
-        {name: '销售', left: '18%', top: '65%', title: '联络客户，把握需求', titleShow: false},
-        {name: '媒介', left: '18%', top: '37%', title: '把控资源，挖掘价值', titleShow: false}
+        {name: '内容', left: '47%', top: '23%', title: '资深团队，专业内容', titleShow: false},
+        {name: '设计', left: '57%', top: '39%', title: '专注专向，追求真美', titleShow: false},
+        {name: '运营', left: '57%', top: '65%', title: '活动组织、赛事管理', titleShow: false},
+        {name: '策划', left: '47%', top: '80%', title: '客户至上，定制方案', titleShow: false},
+        {name: '销售', left: '37%', top: '66%', title: '联络客户，把握需求', titleShow: false},
+        {name: '媒介', left: '37%', top: '37%', title: '把控资源，挖掘价值', titleShow: false}
       ]
     }
   },
@@ -58,14 +58,14 @@ export default {
       display: inline-block;
       // width: 500px;
       // height: 500px;
-      width: 70%;
-      height: 90%;
+      width: 60%;
+      height: 70%;
       position: relative;
     }
     .list li{
       position: absolute;
       // font-size: 36px;
-      font-size: 1em;
+      font-size: 1.5em;
       color: #ffffff;
     }
     .list li:hover{
