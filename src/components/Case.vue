@@ -82,14 +82,18 @@ export default {
       color: #ffffff;
     }
     .list{
-      width: 100%;
-      height: auto;
+      // width: 100%;
+      width:80%;
+      height:100%;
+      margin: 0 auto;
+      // height: auto;
       margin-top: 3%;
       li{
         position: relative;
         display: inline-block;
         width: 25%;
-        height: 200px;
+        // height: 200px;
+        height:30%;
         margin-bottom: 20px;
         img{
           width: 100%;
@@ -105,17 +109,20 @@ export default {
           height: 100%;
           background-color: rgba(0, 0, 0, .3);
           z-index: 999;
+          font-size: 16px;
           p{
             color: #fcd400;
             margin-bottom: 20px;
           }
           p:nth-child(1){
             margin-top: 10%;
-            font-size: 30px;
+            // font-size: 30px;
+            font-size: 1em;
             font-weight: bold;
           }
           p:nth-child(2){
-            font-size: 24px;
+            // font-size: 24px;
+            font-size: 1em;
             font-weight: bold;
           }
         }

@@ -103,7 +103,8 @@ export default {
     margin-bottom: 25px;
   }
   .carousel{
-    width: auto;
+    // width: auto;
+    width:80%;
     height: 70%;
     margin: 0 auto;
     z-index: 999;
@@ -114,7 +115,7 @@ export default {
       height: 70%;
     }
     .first, .second, .third{
-      width: 100%;
+      // width: 100%;     
       text-align: center;
       p{
         font-size: 32px;
@@ -130,8 +131,10 @@ export default {
       .grass{
         div{
           display: inline-block;
-          width: 20%;
-          height: 150px;
+          // width: 20%;
+          // height: 150px;
+          width:15%;
+          height:20%;
           margin-bottom: 20px;
           margin-left: 20px;
           img{
@@ -151,8 +154,10 @@ export default {
       .grass{
         div{
           display: inline-block;
-          width: 15%;
-          height: 150px;
+          // width: 15%;
+          // height: 150px;
+          width:15%;
+          height: 20%;
           margin-bottom: 20px;
           margin-left: 20px;
           img{
