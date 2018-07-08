@@ -39,17 +39,22 @@ export default {
   height: 100%;
   .content{
     width: 100%;
+    //新加的高度
+    height: 100%; 
     text-align: center;
     border-radius: 10px;
     .title{
       font-size: 60px;
       font-weight: bold;
       color: #ffffff;
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
     }
     .image{
-      width: 100%;
-      padding: 0 20px;
+      // width: 100%;
+      // padding: 0 20px;
+      width: 80%;
+      height: 80%;
+      margin: 0 auto;
       img{
         width: 100%;
         height: 100%;

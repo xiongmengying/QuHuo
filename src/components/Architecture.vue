@@ -43,9 +43,12 @@ export default {
 .Resource{
   position: relative;
   width: 100%;
-  height: 709px;
+  // height: 709px;
+  height:100%;
   .content{
     text-align: center;
+    height: 100%;
+    font-size: 16px;
     .title{
       font-size: 60px;
       font-weight: bold;
@@ -53,17 +56,21 @@ export default {
     }
     .pic{
       display: inline-block;
-      width: 500px;
-      height: 500px;
+      // width: 500px;
+      // height: 500px;
+      width: 70%;
+      height: 90%;
       position: relative;
     }
     .list li{
       position: absolute;
-      font-size: 36px;
+      // font-size: 36px;
+      font-size: 1em;
       color: #ffffff;
     }
     .list li:hover{
-      font-size: 40px;
+      // font-size: 40px;
+      font-size: 2em;
       color: #ffffff;
     }
   }

@@ -68,10 +68,12 @@ export default {
   }
   position: relative;
   width: 100%;
-  padding-bottom: 20px;
-  height: 709px;
+  // padding-bottom: 20px;
+  // height: 709px;
+  height: 100%;
   .content{
     text-align: center;
+    height:100%;
     .title, .desc{
       color: #ffffff;
       font-size: 60px;
@@ -82,18 +84,20 @@ export default {
     }
     .detail{
       width: 98%;
+      height:90%;
       margin: 0 1%;
       text-align: center;
-      margin-top: 100px;
+      // margin-top: 100px;
       background-color: rgba(0, 0, 0, .8);
       .listOne, .imge, .listTwo{
         display: inline-block;
-        height: 400px;
+        // height: 400px;
+        height:100%;
       }
       .imge{
         img{
           display: inline-block;
-          height: 400px;
+          // height: 400px;
         }
       }
       .listOne, .listTwo{
