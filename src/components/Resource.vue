@@ -13,7 +13,7 @@
           </ul>
         </div>
         <div class="imge">
-          <img src="static/images/back/about.jpg" />
+          <img src="static/images/resource/2.png" />
         </div>
         <div class="listTwo">
           <ul>
@@ -35,20 +35,20 @@ export default {
     return {
       isShow: false,
       listOne: [
-        { name: '电竞活动', left: '50', top: '0' },
-        { name: '电竞媒体', left: '50', top: '50' },
-        { name: '电竞赛事', left: '50', top: '100' },
-        { name: '电竞俱乐部', left: '0', top: '15' },
-        { name: '游戏直播平台', left: '0', top: '70' },
-        { name: '电竞媒体', left: '-50', top: '50' },
+        { name: '电竞活动', left: '78', top: '0' },
+        { name: '电竞媒体', left: '78', top: '35' },
+        { name: '电竞赛事', left: '78', top: '70' },
+        { name: '电竞俱乐部', left: '58', top: '20' },
+        { name: '游戏直播平台', left: '58', top: '60' },
+        { name: '电竞媒体', left: '38', top: '45' },
       ],
       listTwo: [
-        { name: '游戏开发商', left: '20', top: '0' },
-        { name: '游戏代理商', left: '20', top: '50' },
-        { name: '游戏周边', left: '20', top: '100' },
-        { name: '游戏媒体', left: '70', top: '20' },
-        { name: '游戏直播平台', left: '70', top: '70' },
-        { name: '游戏KOL', left: '120', top: '50' }
+        { name: '游戏开发商', left: '5', top: '0' },
+        { name: '游戏代理商', left: '5', top: '35' },
+        { name: '游戏周边', left: '5', top: '70' },
+        { name: '游戏媒体', left: '25', top: '20' },
+        { name: '游戏直播平台', left: '25', top: '60' },
+        { name: '游戏KOL', left: '45', top: '45' }
       ]
     }
   },
@@ -82,24 +82,23 @@ export default {
       margin-bottom: 15px;
     }
     .detail{
-      width: 100%;
+      width: 98%;
+      margin: 0 1%;
       text-align: center;
       margin-top: 100px;
-      .imge{
-        line-height: 230px;
-        img{
-          width: 230px;
-          height: 230px;
-          border-radius: 50%;
-        }
-      }
+      background-color: rgba(0, 0, 0, .8);
       .listOne, .imge, .listTwo{
         display: inline-block;
-        height: 230px;
+        height: 400px;
+      }
+      .imge{
+        img{
+          display: inline-block;
+          height: 400px;
+        }
       }
       .listOne, .listTwo{
-        width: 300px;
-        height: 300px;
+        width: 40%;
         position: relative;
         ul{
           width: 100%;
@@ -113,14 +112,16 @@ export default {
             border-radius: 50%;
             color: #ffffff;
             font-weight: bold;
-            p{
-              font-size: 14px;
-            }
-          }
-          li:hover{
+            word-wrap:break-word;
+            word-break:break-all;
             p{
               font-size: 18px;
             }
+          }
+          li:hover{
+            word-wrap:break-word;
+            word-break:break-all;
+            transform: scale(1.08);
           }
         }
       }

@@ -39,13 +39,12 @@ export default {
   height: 100%;
   .content{
     width: 100%;
-    height: 100%;
     text-align: center;
     border-radius: 10px;
     .title{
       font-size: 48px;
       font-weight: bold;
-      color: #f9bf00;
+      color: #ffffff;
       margin-bottom: 20px;
     }
     .image{
