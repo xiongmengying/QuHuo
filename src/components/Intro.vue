@@ -33,6 +33,18 @@
       0%   { bottom:0%; display: none;}
       100% { bottom:20%; display: block;}
     }
+    @-moz-keyframes myfirst {
+      0%   { bottom:0%; display: none;}
+      100% { bottom:20%; display: block;}
+    }
+    @-ms-keyframes myfirst {
+      0%   { bottom:0%; display: none;}
+      100% { bottom:20%; display: block;}
+    }
+    @-o-keyframes myfirst {
+      0%   { bottom:0%; display: none;}
+      100% { bottom:20%; display: block;}
+    }
     p:nth-child(1){
       font-family: '宋体';
       font-size: 60px;
