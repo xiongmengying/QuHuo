@@ -24,7 +24,7 @@
             </div>
           </el-carousel-item>
           <el-carousel-item class="first">
-            <p>其他客户</p>
+            <p>赛事商务服务客户</p>
             <div class="grass">
               <div v-for="(item, index) in otherLists" :key="index" :title="item.name">
                 <img :src="item.imgUrl" alt="">
