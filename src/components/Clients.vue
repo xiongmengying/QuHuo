@@ -16,7 +16,7 @@
             </div>
           </el-carousel-item>
           <el-carousel-item class="second">
-            <p>快销客户</p>
+            <p>快消及其他客户</p>
             <div class="grass">
               <div v-for="(item, index) in fastLists" :key="index" :title="item.name">
                 <img :src="item.imgUrl" alt="">
@@ -58,9 +58,9 @@ export default {
       fastLists: [
         { name: '来伊份', imgUrl: 'static/images/clients/FAST/laiyifen.png' },
         { name: '东鹏特饮', imgUrl: 'static/images/clients/FAST/dongpeng.png' },
-        { name: '多乐多滋', imgUrl: 'static/images/clients/FAST/duoleduozi.png' },
-        { name: '伊利', imgUrl: 'static/images/clients/FAST/yili.png' },
-        { name: '乐虎', imgUrl: 'static/images/clients/FAST/lehu.png' }
+        { name: '乐虎', imgUrl: 'static/images/clients/FAST/lehu.png' },
+        { name: '永久', imgUrl: 'static/images/clients/FAST/forever.png' },
+        { name: '公牛', imgUrl: 'static/images/clients/FAST/bull.png' }
       ],
       // 其他客户
       otherLists: [
@@ -68,9 +68,9 @@ export default {
         { name: '吉普', imgUrl: 'static/images/clients/OTHER/jeep.png' },
         { name: '招商银行', imgUrl: 'static/images/clients/OTHER/zhaoshang.png' },
         { name: '浦发银行', imgUrl: 'static/images/clients/OTHER/pufa.png' },
-        { name: '迪瑞克斯 ', imgUrl: 'static/images/clients/OTHER/dxracer.png' },
-        { name: '杰克琼斯', imgUrl: 'static/images/clients/OTHER/jack.png' },
-        { name: '马克华菲', imgUrl: 'static/images/clients/OTHER/fairwhale.png' },
+        { name: '多乐多滋 ', imgUrl: 'static/images/clients/OTHER/doritos.png' },
+        { name: '伊利', imgUrl: 'static/images/clients/OTHER/yili.png' },
+        { name: '迪锐克斯', imgUrl: 'static/images/clients/OTHER/dxracer.png' },
         { name: '欧莱雅 ', imgUrl: 'static/images/clients/OTHER/oulaiya.png' }
       ]
     }

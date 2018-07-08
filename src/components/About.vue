@@ -19,8 +19,8 @@
             </div>
             <div class="breif_li_two" v-show="breif_li_two">
               <video id="video" width="420" height="240" ref="video">
-                <source src="static/images/video/2.mp4" type="video/mp4">
-              您的浏览器不支持Video标签。
+                <source src="static/images/video/about.mp4" type="video/mp4">
+                您的浏览器不支持Video标签。
               </video>
             </div>
           </li>
@@ -46,6 +46,7 @@ export default {
     data() {
       return {
         isShow: false,
+        isPlaying: false,
         breif_li_one: false,
         breif_li_two: false,
         breif_li_three: false
@@ -56,12 +57,20 @@ export default {
     },
     methods: {
       show() {
+        const _that = this;
         this.breif_li_two = true;
-        this.$refs.video.play();
+        this.$refs.video.pause();
+        setTimeout(function() {
+          _that.$refs.video.play();
+        }, 100);
       },
       hide() {
+        const _that = this;
         this.breif_li_two = false;
-        this.$refs.video.pause();
+        this.$refs.video.play();
+        setTimeout(function() {
+          _that.$refs.video.pause();
+        }, 100);
       }
     }
 }

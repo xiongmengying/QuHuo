@@ -1,20 +1,20 @@
 <template>
   <div class="swiper-container" style="background: url('static/images/back/intro.jpg') no-repeat center center;background-size: cover;">
     <div class="swiper-wrapper">
-        <div id="Intro" class="swiper-slide">
+        <div class="swiper-slide">
           <Intro></Intro>
         </div>
-        <div id="About" class="swiper-slide">
+        <div class="swiper-slide">
           <About></About>
         </div>
-        <div id="Architecture" class="swiper-slide">
-          <Architecture></Architecture>
+        <div class="swiper-slide">
+          <Business></Business>  
         </div>
-        <div id="Resource" class="swiper-slide">
+        <div class="swiper-slide">
+          <Architecture></Architecture>  
+        </div>
+        <div class="swiper-slide">
           <Resource></Resource>
-        </div>
-        <div id="Business" class="swiper-slide">
-          <Business></Business>
         </div>
     </div>
     <!-- 如果需要分页器 -->
@@ -36,21 +36,16 @@ export default {
     return {
       mySwiper: '',
       initialSlide: 0,
-      queryList: ['about', 'resource', 'business', 'architecture']
+      queryList: ['about', 'business', 'architecture', 'resource']
     }
   },
   mounted() {
     this.Swiper();
   },
-  updated() {
-    this.Swiper();
-  },
   watch: {
     $route(to, from) {
-      console.log(this.$route.query);
       this.initialSlide = this.queryList.indexOf(this.$route.query.from);
-      console.log(this.initialSlide);
-      this.mySwiper.slideTo(this.initialSlide, 1000, false);
+      this.mySwiper.slideTo(this.initialSlide + 1, 1000, false);
     }
   },
   methods: {
