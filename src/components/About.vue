@@ -1,5 +1,5 @@
 <template>
-  <div class="About" style="background: url('static/images/back/about.jpg') no-repeat center center;background-size: cover;">
+  <div class="About">
     <transition name="fade">
       <div class="content" v-show="isShow">
         <p class="contentAbout">关于趣活</p>

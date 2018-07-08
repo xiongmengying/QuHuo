@@ -16,6 +16,11 @@ export default new Router({
           component: resolve => require(['@/components/Business'], resolve)
         },
         {
+          path: '/case',
+          name: 'Case',
+          component: resolve => require(['@/components/Case'], resolve)
+        },
+        {
           path: '/clients',
           name: 'Clients',
           component: resolve => require(['@/components/Clients'], resolve)

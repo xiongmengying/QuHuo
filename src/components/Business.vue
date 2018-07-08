@@ -1,28 +1,31 @@
 <template>
-  <div class="Business" style="background: url('static/images/back/business.jpg') no-repeat center center;background-size: cover;">
+  <div class="Architecture">
     <div class="content">
-      <p class="title">电 竞 + 游 戏</p>
-      <p class="desc">营 销 资 源</p>
-      <transition name="fade">
-      <div class="detail" v-show="isShow">
-        <div class="listOne">
-          <ul>
-            <li v-for="(item, index) in listOne" :key="index" :style="`left: ${item.left}%;top: ${item.top}%`" :title="item.name">
-              <p>{{item.name}}</p>
-            </li>
-          </ul>
-        </div>
-        <div class="imge">
-          <img src="static/images/back/about.jpg" />
-        </div>
-        <div class="listTwo">
-          <ul>
-            <li v-for="(item, index) in listTwo" :key="index" :style="`left: ${item.left}%;top: ${item.top}%`" :title="item.name">
-              <p>{{item.name}}</p>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <p class="title">服务范围</p>
+      <p class="desc">为品牌提供一站式的游戏/电竞人群传播解决方案</p>
+      <transition name="move">
+        <ul class="step" v-show="isShow">
+          <li>
+            <div></div>
+            <span>需 求 拆 解</span>
+          </li>
+          <li>
+            <div></div>
+            <span>用 户 分 析</span>
+          </li>
+          <li>
+            <div></div>
+            <span>定 制 方 案</span>
+          </li>
+          <li style="width: 200px;height: 200px;">
+            <div></div>
+            <span>执 行 运 营</span>
+          </li>
+          <li>
+            <div></div>
+            <span>达 成 目 的</span>
+          </li>
+        </ul>
       </transition>
     </div>
   </div>
@@ -30,162 +33,90 @@
 
 <script>
 export default {
-    name: 'Business',
-    data() {
-      return {
-        isShow: false,
-        listOne: [
-          {
-            name: '电竞活动',
-            left: '50',
-            top: '0'
-          },
-          {
-            name: '电竞媒体',
-            left: '50',
-            top: '50'
-          },
-          {
-            name: '电竞赛事',
-            left: '50',
-            top: '100'
-          },
-          {
-            name: '电竞俱乐部',
-            left: '0',
-            top: '15'
-          },
-          {
-            name: '游戏直播平台',
-            left: '0',
-            top: '70'
-          },
-          {
-            name: '电竞媒体',
-            left: '-50',
-            top: '50'
-          },
-        ],
-        listTwo: [
-          {
-            name: '游戏开发商',
-            left: '20',
-            top: '0'
-          },
-          {
-            name: '游戏代理商',
-            left: '20',
-            top: '50'
-          },
-          {
-            name: '游戏周边',
-            left: '20',
-            top: '100'
-          },
-          {
-            name: '游戏媒体',
-            left: '70',
-            top: '20'
-          },
-          {
-            name: '游戏直播平台',
-            left: '70',
-            top: '70'
-          },
-          {
-            name: '游戏KOL',
-            left: '100',
-            top: '50'
-          },
-        ]
-      }
-    },
-    mounted() {
-      this.isShow = true;
+  name: 'Architecture',
+  data() {
+    return {
+      isShow: false
     }
+  },
+  mounted() {
+    this.isShow = true;
+  }
 }
 </script>
 
 <style lang="less" scoped>
-.Business{
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity 1s
+.Architecture{
+  .move-enter-active{
+    transition: all 0.5s linear;
+    transform: translate3d(0, 0, 0);
   }
-  .fade-enter, .fade-leave-active {
-    opacity: 0
+  .move-enter{
+    transform: translate3d(100%, 0, 0);
   }
+  min-width: 1200px;
   position: relative;
   width: 100%;
-  padding-bottom: 20px;
+  padding: 20px 30px;
   height: 709px;
   .content{
-    padding-top: 45px;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    .title, .desc{
-      color: #ffffff;
-      font-size: 40px;
-      font-weight: bold;
-    }
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 10px;
     .title{
-      margin-bottom: 15px;
+      font-size: 48px;
+      font-weight: bold;
+      color: #f9bf00;
+      margin-bottom: 50px;
     }
-    .detail{
+    .desc{
+      font-size: 26px;
+      font-weight: bold;
+      color: #333333;
+    }
+    .step{
       width: 100%;
-      text-align: center;
-      margin-top: 100px;
-      .imge{
-        line-height: 230px;
-        img{
-          width: 230px;
-          height: 230px;
-          border-radius: 50%;
-        }
-      }
-      .listOne, .imge, .listTwo{
+      height: auto;
+      margin-top: 200px;
+      li{
         display: inline-block;
-        height: 230px;
-      }
-      .listOne, .listTwo{
-        width: 300px;
-        height: 300px;
+        width: 150px;
+        height: 150px;
+        margin-right:100px;
         position: relative;
-        ul{
+        div{
           width: 100%;
           height: 100%;
-          float: left;
-          li{
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            line-height: 120px;
-            border-radius: 50%;
-            color: #ffffff;
-            font-weight: bold;
-            p{
-              font-size: 14px;
-            }
-          }
-          li:hover{
-            p{
-              font-size: 18px;
-            }
-          }
+          border: 5px solid #f6aa27;
+          transform:rotate(45deg);
+          -ms-transform:rotate(45deg); /* Internet Explorer */
+          -moz-transform:rotate(45deg); /* Firefox */
+          -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+          -o-transform:rotate(45deg); /* Opera */
+        }
+        span{
+          position: absolute;
+          left: 11%;
+          top: 38%;
+          font-size: 24px;
         }
       }
-      .listOne{
-        ul{
-          li{
-            border: 5px solid #fdf535;
-            box-shadow: 0 0 40px #a61912, inset 0 0 40px #a61912;
-          }
+      li:nth-child(4){
+        position: relative;
+        div{
+          position: relative;
+          top: 12%;
+          width: 100%;
+          height: 100%;
+          border: 8px solid #f6aa27;
         }
-      }
-      .listTwo{
-        ul{
-          li{
-            border: 4px solid #1e4ffd;
-            box-shadow: 0 0 40px #1e4ffd, inset 0 0 40px #1e4ffd;
-          }
+        span{
+          position: absolute;
+          left: 21%;
+          top: 53%;
+          font-size: 24px;
         }
       }
     }

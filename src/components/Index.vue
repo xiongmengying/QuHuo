@@ -9,12 +9,12 @@
         <div class="nav">
           <ul class="clearfix">
             <li @mouseover="secondShow = true" @mouseout="secondShow = false">
-              <router-link to="/intro" active-class="selected">趣活介绍</router-link>
+              <router-link to="/quhuo" active-class="selected">趣活介绍</router-link>
               <ul class="second" @mouseover="secondShow = true" @mouseout="secondShow = false" v-show="secondShow">
-                <li><router-link to="/about" active-class="selected">关于趣活</router-link></li>
-                <li><router-link to="/resource" active-class="selected">公司架构</router-link></li>
-                <li><router-link to="/business" active-class="selected">趣活资源</router-link></li>
-                <li><router-link to="/architecture" active-class="selected">趣活业务</router-link></li>
+                <li><router-link :to="{query: { from: 'about' }}">关于趣活</router-link></li>
+                <li><router-link :to="{query: { from: 'resource'}}">公司架构</router-link></li>
+                <li><router-link :to="{query: { from: 'business'}}">趣活资源</router-link></li>
+                <li><router-link :to="{query: { from: 'architecture'}}">趣活业务</router-link></li>
               </ul>
             </li>
             <li><router-link to="/clients" active-class="selected">趣活客户</router-link></li>

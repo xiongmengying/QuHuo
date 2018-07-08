@@ -1,40 +1,102 @@
 <template>
-  <div class="Resource" style="background: url('static/images/back/resource.jpg') no-repeat center center;background-size: cover;">
+  <div class="Business">
     <div class="content">
-      <p class="title">趣活架构</p>
+      <p class="title">电 竞 + 游 戏</p>
+      <p class="desc">营 销 资 源</p>
       <transition name="fade">
-        <div class="pie" v-show="isShow">
-          <div class="outer">
-            <div class="zeroDeg"></div>
-            <div class="sixtyDeg"></div>
-            <div class="twelveDeg"></div>
-            <ul class="list">
-              <li v-for="(item, index) in list" :key="index" :style="`left: ${item.left}; top: ${item.top};`" :title="item.title">
-                {{item.name}}
-              </li>
-            </ul>
-            <div class="inner">CEO</div>
-          </div>
+      <div class="detail" v-show="isShow">
+        <div class="listOne">
+          <ul>
+            <li v-for="(item, index) in listOne" :key="index" :style="`left: ${item.left}%;top: ${item.top}%`" :title="item.name">
+              <p>{{item.name}}</p>
+            </li>
+          </ul>
         </div>
+        <div class="imge">
+          <img src="static/images/back/about.jpg" />
+        </div>
+        <div class="listTwo">
+          <ul>
+            <li v-for="(item, index) in listTwo" :key="index" :style="`left: ${item.left}%;top: ${item.top}%`" :title="item.name">
+              <p>{{item.name}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
       </transition>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'Resource',
+  name: 'Business',
   data() {
     return {
       isShow: false,
-      list: [
-        {name: '内容', left: '42%', top: '5%', title: '资深团队，专业内容'},
-        {name: '设计', left: '76%', top: '28%', title: '专注专向，追求真美'},
-        {name: '运营', left: '73%', top: '65%', title: '活动组织、赛事管理'},
-        {name: '策划', left: '42%', top: '82%', title: '客户至上，定制方案'},
-        {name: '销售', left: '9%', top: '65%', title: '联络客户，把握需求'},
-        {name: '媒介', left: '8%', top: '27%', title: '把控资源，挖掘价值'}
+      listOne: [
+        {
+          name: '电竞活动',
+          left: '50',
+          top: '0'
+        },
+        {
+          name: '电竞媒体',
+          left: '50',
+          top: '50'
+        },
+        {
+          name: '电竞赛事',
+          left: '50',
+          top: '100'
+        },
+        {
+          name: '电竞俱乐部',
+          left: '0',
+          top: '15'
+        },
+        {
+          name: '游戏直播平台',
+          left: '0',
+          top: '70'
+        },
+        {
+          name: '电竞媒体',
+          left: '-50',
+          top: '50'
+        },
+      ],
+      listTwo: [
+        {
+          name: '游戏开发商',
+          left: '20',
+          top: '0'
+        },
+        {
+          name: '游戏代理商',
+          left: '20',
+          top: '50'
+        },
+        {
+          name: '游戏周边',
+          left: '20',
+          top: '100'
+        },
+        {
+          name: '游戏媒体',
+          left: '70',
+          top: '20'
+        },
+        {
+          name: '游戏直播平台',
+          left: '70',
+          top: '70'
+        },
+        {
+          name: '游戏KOL',
+          left: '100',
+          top: '50'
+        },
       ]
     }
   },
@@ -45,75 +107,85 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.Resource{
-  position: relative;
-  width: 100%;
-  height: 709px;
+.Business{
   .fade-enter-active, .fade-leave-active {
-    transition: rotate(360deg);
+    transition: opacity 1s
   }
   .fade-enter, .fade-leave-active {
-    transition: rotate(0);
+    opacity: 0
   }
+  position: relative;
+  width: 100%;
+  padding-bottom: 20px;
+  height: 709px;
   .content{
     padding-top: 45px;
     text-align: center;
-    .title{
-      font-size: 60px;
-      font-weight: bold;
+    .title, .desc{
       color: #ffffff;
+      font-size: 40px;
+      font-weight: bold;
     }
-    .pie{
+    .title{
+      margin-bottom: 15px;
+    }
+    .detail{
       width: 100%;
-      height: 400px;
-      margin-top: 50px;
       text-align: center;
-      .outer{
-        display: inline-block;
-        width: 450px;
-        height: 450px;
-        border-radius: 50%;
-        background-color: #e2b036;
-        position: relative;
-        .inner{
-          display: inline-block;
-          width: 250px;
-          height: 250px;
-          line-height: 250px;
+      margin-top: 100px;
+      .imge{
+        line-height: 230px;
+        img{
+          width: 230px;
+          height: 230px;
           border-radius: 50%;
-          font-size: 95px;
-          font-weight: bold;
-          background-color: #f8cf2c;
-          position: absolute;
-          top: 22%;
-          left: 22%;
-          transition: All 1s ease-in-out;
-          -webkit-transition: All 1s ease-in-out;
-          -moz-transition: All 1s ease-in-out;
-          -o-transition: All 1s ease-in-out;
         }
-        .inner:hover{
-          transform: rotate(360deg);
+      }
+      .listOne, .imge, .listTwo{
+        display: inline-block;
+        height: 230px;
+      }
+      .listOne, .listTwo{
+        width: 300px;
+        height: 300px;
+        position: relative;
+        ul{
+          width: 100%;
+          height: 100%;
+          float: left;
+          li{
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            border-radius: 50%;
+            color: #ffffff;
+            font-weight: bold;
+            p{
+              font-size: 14px;
+            }
+          }
+          li:hover{
+            p{
+              font-size: 18px;
+            }
+          }
         }
-        .zeroDeg, .sixtyDeg, .twelveDeg{
-          width: 450px;
-          height: 1px;
-          background-color: #ff8e28;
-          position: absolute;
-          top: 50%;
+      }
+      .listOne{
+        ul{
+          li{
+            border: 5px solid #fdf535;
+            box-shadow: 0 0 40px #a61912, inset 0 0 40px #a61912;
+          }
         }
-        .sixtyDeg{
-          transform: rotate(60deg);
-        }
-        .twelveDeg{
-          transform: rotate(120deg);
-        }
-        .list li{
-          position: absolute;
-          font-size: 40px;
-        }
-        .list li:hover{
-          color: #ffffff;
+      }
+      .listTwo{
+        ul{
+          li{
+            border: 4px solid #1e4ffd;
+            box-shadow: 0 0 40px #1e4ffd, inset 0 0 40px #1e4ffd;
+          }
         }
       }
     }

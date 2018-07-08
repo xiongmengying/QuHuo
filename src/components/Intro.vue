@@ -1,5 +1,5 @@
 <template>
-  <div class="Intro" style="background: url('static/images/back/1.jpg') no-repeat center center;background-size: cover;">
+  <div class="Intro">
     <div class="content">
       <p>懂游戏  懂电竞  懂用户</p>
       <p>游戏/电竞 整合营销专家</p>

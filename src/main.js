@@ -10,7 +10,7 @@ import Architecture from '@/components/Architecture'
 import Resource from '@/components/Resource'
 import Business from '@/components/Business'
 import Swiper from 'swiper';
-import 'swiper/dist/css/swiper.min.css';
+import 'swiper/dist/css/swiper.css';
 
 Vue.config.productionTip = false
 
