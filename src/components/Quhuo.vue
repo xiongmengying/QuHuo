@@ -23,7 +23,7 @@
     <!-- <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div> -->
     <!-- 如果需要滚动条 -->
-    <!-- <div class="swiper-scrollbar"></div> -->
+    <div class="swiper-scrollbar"></div>
   </div>
 </template>
 
@@ -34,6 +34,7 @@ export default {
   name: 'quhuo',
   data() {
     return {
+      mySwiper: '',
       initialSlide: 0,
       queryList: ['about', 'resource', 'business', 'architecture']
     }
@@ -46,24 +47,28 @@ export default {
   },
   watch: {
     $route(to, from) {
-      this.initialSlide = this.queryList.indexOf(this.$route.query.from) + 1;
-      this.Swiper();
+      console.log(this.$route.query);
+      this.initialSlide = this.queryList.indexOf(this.$route.query.from);
+      console.log(this.initialSlide);
+      this.mySwiper.slideTo(this.initialSlide, 1000, false);
     }
   },
   methods: {
     Swiper() {
-      new Swiper ('.swiper-container', {
-        initialSlide: this.initialSlide,
-        mousewheel: true,
-        direction: 'vertical',
-        // 如果需要分页器
-        pagination: '.swiper-pagination',
-        // 如果需要前进后退按钮
-        //   nextButton: '.swiper-button-next',
-        //   prevButton: '.swiper-button-prev',
-        // 如果需要滚动条
-        //   scrollbar: '.swiper-scrollbar',
-      })
+      this.mySwiper = new Swiper ('.swiper-container', {
+      initialSlide: this.initialSlide,
+      mousewheel: {
+        releaseOnEdges: true, // 当Swiper处于边缘位置时，Swiper释放鼠标滚轮事件，鼠标可以控制页面滚动
+      },
+      direction: 'vertical',
+      // 如果需要分页器
+      pagination: '.swiper-pagination',
+      // 如果需要前进后退按钮
+      // nextButton: '.swiper-button-next',
+      // prevButton: '.swiper-button-prev',
+      // 如果需要滚动条
+      scrollbar: {el: '.swiper-scrollbar',hide:true},
+    })
     }
   }
 }
