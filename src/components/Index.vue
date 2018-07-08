@@ -4,7 +4,7 @@
     <div class="navBar">
       <div class="bar clearfix">
         <div class="logo">
-          <img src="static/images/logo.jpg" @click="this.$router.repalce('/Index')"/>
+          <img src="static/images/logo.png" @click="jumpTo()"/>
         </div>
         <div class="nav">
           <ul class="clearfix">
@@ -51,6 +51,9 @@ export default {
     this.$router.push('quhuo');
   },
   methods: {
+    jumpTo() {
+      this.$router.push('/quhuo');
+    }
   },
   computed: {
   }
@@ -90,6 +93,7 @@ export default {
           width: 125px;
           height: auto;
           vertical-align: middle;
+          cursor: pointer;
         }
       }
       .nav{

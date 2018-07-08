@@ -11,10 +11,10 @@
           <Architecture></Architecture>
         </div>
         <div id="Resource" class="swiper-slide">
-          <Business></Business>
+          <Resource></Resource>
         </div>
         <div id="Business" class="swiper-slide">
-          <Resource></Resource>
+          <Business></Business>
         </div>
     </div>
     <!-- 如果需要分页器 -->
@@ -39,27 +39,15 @@ export default {
     }
   },
   mounted() {
-    new Swiper ('.swiper-container', {
-      initialSlide: this.initialSlide,
-      mousewheel: true,
-      direction: 'vertical',
-      // 如果需要分页器
-      pagination: '.swiper-pagination',
-      // 如果需要前进后退按钮
-    //   nextButton: '.swiper-button-next',
-    //   prevButton: '.swiper-button-prev',
-      // 如果需要滚动条
-    //   scrollbar: '.swiper-scrollbar',
-    })
+    this.Swiper();
   },
   updated() {
     this.Swiper();
   },
   watch: {
     $route(to, from) {
-      console.log(this.$route.query);
-      this.initialSlide = this.queryList.indexOf(this.$route.query.from);
-      console.log(this.initialSlide);
+      this.initialSlide = this.queryList.indexOf(this.$route.query.from) + 1;
+      this.Swiper();
     }
   },
   methods: {

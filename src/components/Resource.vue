@@ -35,68 +35,20 @@ export default {
     return {
       isShow: false,
       listOne: [
-        {
-          name: '电竞活动',
-          left: '50',
-          top: '0'
-        },
-        {
-          name: '电竞媒体',
-          left: '50',
-          top: '50'
-        },
-        {
-          name: '电竞赛事',
-          left: '50',
-          top: '100'
-        },
-        {
-          name: '电竞俱乐部',
-          left: '0',
-          top: '15'
-        },
-        {
-          name: '游戏直播平台',
-          left: '0',
-          top: '70'
-        },
-        {
-          name: '电竞媒体',
-          left: '-50',
-          top: '50'
-        },
+        { name: '电竞活动', left: '50', top: '0' },
+        { name: '电竞媒体', left: '50', top: '50' },
+        { name: '电竞赛事', left: '50', top: '100' },
+        { name: '电竞俱乐部', left: '0', top: '15' },
+        { name: '游戏直播平台', left: '0', top: '70' },
+        { name: '电竞媒体', left: '-50', top: '50' },
       ],
       listTwo: [
-        {
-          name: '游戏开发商',
-          left: '20',
-          top: '0'
-        },
-        {
-          name: '游戏代理商',
-          left: '20',
-          top: '50'
-        },
-        {
-          name: '游戏周边',
-          left: '20',
-          top: '100'
-        },
-        {
-          name: '游戏媒体',
-          left: '70',
-          top: '20'
-        },
-        {
-          name: '游戏直播平台',
-          left: '70',
-          top: '70'
-        },
-        {
-          name: '游戏KOL',
-          left: '100',
-          top: '50'
-        },
+        { name: '游戏开发商', left: '20', top: '0' },
+        { name: '游戏代理商', left: '20', top: '50' },
+        { name: '游戏周边', left: '20', top: '100' },
+        { name: '游戏媒体', left: '70', top: '20' },
+        { name: '游戏直播平台', left: '70', top: '70' },
+        { name: '游戏KOL', left: '120', top: '50' }
       ]
     }
   },

@@ -23,7 +23,7 @@
               </div>
             </div>
           </el-carousel-item>
-          <el-carousel-item class="third">
+          <el-carousel-item class="first">
             <p>其他客户</p>
             <div class="grass">
               <div v-for="(item, index) in otherLists" :key="index" :title="item.name">
@@ -69,8 +69,6 @@ export default {
         { name: '招商银行', imgUrl: 'static/images/clients/OTHER/zhaoshang.png' },
         { name: '浦发银行', imgUrl: 'static/images/clients/OTHER/pufa.png' },
         { name: '迪瑞克斯 ', imgUrl: 'static/images/clients/OTHER/dxracer.png' },
-        { name: '公牛', imgUrl: 'static/images/clients/OTHER/bull.png' },
-        { name: '上海永久', imgUrl: 'static/images/clients/OTHER/forever.png' },
         { name: '杰克琼斯', imgUrl: 'static/images/clients/OTHER/jack.png' },
         { name: '马克华菲', imgUrl: 'static/images/clients/OTHER/fairwhale.png' },
         { name: '欧莱雅 ', imgUrl: 'static/images/clients/OTHER/oulaiya.png' }
@@ -153,26 +151,6 @@ export default {
         div{
           display: inline-block;
           width: 15%;
-          height: 150px;
-          margin-bottom: 20px;
-          margin-left: 20px;
-          img{
-            width: 100%;
-            height: 100%;
-          }
-        }
-        div:hover{
-          transform: scale(1.08);
-        }
-      }
-    }
-    .third{
-      .grass{
-        width: 100%;
-        height: 100%;
-        div{
-          display: inline-block;
-          width: 18%;
           height: 150px;
           margin-bottom: 20px;
           margin-left: 20px;

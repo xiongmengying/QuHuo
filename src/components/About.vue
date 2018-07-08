@@ -3,7 +3,6 @@
     <transition name="fade">
       <div class="content" v-show="isShow">
         <p class="contentAbout">关于趣活</p>
-        <p class="detail"><span>英雄联盟头部赛事唯一商务执行团队</span></p>
         <ul class="breif">
           <li style="margin-right: 40px;" @mouseover="breif_li_one = true" @mouseout="breif_li_one = false">
             <div class="breif_li_one" v-show="!breif_li_one">
@@ -19,8 +18,8 @@
               趣活介绍动画
             </div>
             <div class="breif_li_two" v-show="breif_li_two">
-              <video id="video" width="320" height="240" ref="video">
-                <source src="static/images/video/about.mp4" type="video/mp4">
+              <video id="video" width="420" height="240" ref="video">
+                <source src="static/images/video/2.mp4" type="video/mp4">
               您的浏览器不支持Video标签。
               </video>
             </div>
@@ -91,14 +90,6 @@ export default {
       font-weight: bold;
       color: #ffffff;
       margin-bottom: 15px;
-    }
-    .detail span{
-      display: inline-block;
-      padding: 0 25px;
-      background-color: #ffa030;
-      color: #ffffff;
-      font-size: 36px;
-      line-height: 55px;
     }
     .breif{
       li{
