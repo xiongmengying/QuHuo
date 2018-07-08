@@ -88,12 +88,13 @@ export default {
 <style lang="less" scoped>
 .Clients{
   width: 100%;
-  height: 689px;
+  height: 97%;
+  margin-bottom: 3%;
   text-align: center;
   .swiper-container {
     width: 100%;
-    height: 689px;
-    margin-bottom: 20px;
+    height: 100%;
+    margin-bottom: 1%;
   }
   .title{
     font-size: 48px;
@@ -103,14 +104,14 @@ export default {
   }
   .carousel{
     width: auto;
-    height: 500px;
+    height: 70%;
     margin: 0 auto;
     z-index: 999;
     text-align: center;
     overflow: hidden;
     .el-carousel__container{
       position: relative;
-      height: 400px;
+      height: 70%;
     }
     .first, .second, .third{
       width: 100%;

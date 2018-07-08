@@ -61,7 +61,8 @@ export default {
 .Case{
   position: relative;
   width: 100%;
-  height: 689px;
+  height: 97%;
+  margin-bottom: 3%;
   .fade-enter-active, .fade-leave-active {
     transition: opacity 1s
   }
@@ -83,7 +84,7 @@ export default {
     .list{
       width: 100%;
       height: auto;
-      margin-top: 100px;
+      margin-top: 3%;
       li{
         position: relative;
         display: inline-block;

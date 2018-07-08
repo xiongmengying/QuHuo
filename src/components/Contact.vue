@@ -48,21 +48,22 @@ export default {
 .Intro{
   position: relative;
   width: 100%;
-  height: 689px;
+  height: 97%;
+  margin-bottom: 3%;
   .content{
     width: auto;
-    padding-top: 150px;
+    padding-top: 5%;
     z-index: 99;
     text-align: center;
     margin: 0 auto;
     ul{
       width: 100%;
-      height: 420px;
+      height: 40%;
       li{
         display: inline-block;
         width: 30%;
         height: 420px;
-        padding-top: 160px;
+        padding-top: 8%;
         background-color: red;
         margin-right: 10px;
         p{
@@ -70,7 +71,7 @@ export default {
           font-size: 28px;
           color: #ffffff;
           font-weight: bold;
-          margin-bottom: 20px;
+          margin-bottom: 5%;
         }
       }
     }
