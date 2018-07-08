@@ -78,7 +78,7 @@ export default {
     .title{
       font-size: 48px;
       font-weight: bold;
-      color: #fcd400;
+      color: #ffffff;
     }
     .list{
       width: 100%;

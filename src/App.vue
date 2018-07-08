@@ -13,12 +13,6 @@ export default {
 </script>
 
 <style lang="less">
-.confirm{
-  font-size: 18px;
-}
-.cancel{
-  font-size: 18px;
-}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

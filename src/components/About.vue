@@ -90,7 +90,6 @@ export default {
   }
   .content{
     width: auto;
-    padding-top: 50px;
     z-index: 99;
     text-align: center;
     margin: 0 auto;

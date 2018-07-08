@@ -4,8 +4,11 @@
       <p class="title">趣活架构</p>
       <div class="pic" style="background: url('static/images/intro/artic.png') no-repeat center center; background-size: cover;">
         <ul class="list">
-          <li v-for="(item, index) in list" :key="index" :style="`left: ${item.left}; top: ${item.top};`" :title="item.title">
+          <li v-for="(item, index) in list" :key="index" :style="`left: ${item.left}; top: ${item.top};`" :title="item.name">
             {{item.name}}
+            <div @click="item.titleShow = !item.titleShow" v-show="item.titleShow">
+              {{item.title}}
+            </div>
           </li>
         </ul>
       </div>
@@ -21,12 +24,12 @@ export default {
     return {
       isShow: false,
       list: [
-        {name: '内容', left: '42%', top: '23%', title: '资深团队，专业内容'},
-        {name: '设计', left: '66%', top: '37%', title: '专注专向，追求真美'},
-        {name: '运营', left: '67%', top: '63%', title: '活动组织、赛事管理'},
-        {name: '策划', left: '42%', top: '80%', title: '客户至上，定制方案'},
-        {name: '销售', left: '18%', top: '65%', title: '联络客户，把握需求'},
-        {name: '媒介', left: '18%', top: '37%', title: '把控资源，挖掘价值'}
+        {name: '内容', left: '42%', top: '23%', title: '资深团队，专业内容', titleShow: false},
+        {name: '设计', left: '66%', top: '37%', title: '专注专向，追求真美', titleShow: false},
+        {name: '运营', left: '67%', top: '63%', title: '活动组织、赛事管理', titleShow: false},
+        {name: '策划', left: '42%', top: '80%', title: '客户至上，定制方案', titleShow: false},
+        {name: '销售', left: '18%', top: '65%', title: '联络客户，把握需求', titleShow: false},
+        {name: '媒介', left: '18%', top: '37%', title: '把控资源，挖掘价值', titleShow: false}
       ]
     }
   },
@@ -42,7 +45,6 @@ export default {
   width: 100%;
   height: 709px;
   .content{
-    padding-top: 45px;
     text-align: center;
     .title{
       font-size: 60px;

@@ -71,11 +71,10 @@ export default {
   padding-bottom: 20px;
   height: 709px;
   .content{
-    padding-top: 45px;
     text-align: center;
     .title, .desc{
       color: #ffffff;
-      font-size: 40px;
+      font-size: 60px;
       font-weight: bold;
     }
     .title{

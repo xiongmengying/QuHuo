@@ -42,7 +42,7 @@ export default {
     text-align: center;
     border-radius: 10px;
     .title{
-      font-size: 48px;
+      font-size: 60px;
       font-weight: bold;
       color: #ffffff;
       margin-bottom: 20px;
