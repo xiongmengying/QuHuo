@@ -11,24 +11,9 @@ export default new Router({
       component: resolve => require(['@/components/Index'], resolve),
       children: [
         {
-          path: '/about',
-          name: 'About',
-          component: resolve => require(['@/components/About'], resolve)
-        },
-        {
-          path: '/architecture',
-          name: 'Architecture',
-          component: resolve => require(['@/components/Architecture'], resolve)
-        },
-        {
           path: '/business',
           name: 'Business',
           component: resolve => require(['@/components/Business'], resolve)
-        },
-        {
-          path: '/case',
-          name: 'Case',
-          component: resolve => require(['@/components/Case'], resolve)
         },
         {
           path: '/clients',
@@ -41,15 +26,10 @@ export default new Router({
           component: resolve => require(['@/components/Contact'], resolve)
         },
         {
-          path: '/intro',
-          name: 'Intro',
-          component: resolve => require(['@/components/Intro'], resolve)
-        },
-        {
-          path: '/resource',
-          name: 'Resource',
-          component: resolve => require(['@/components/Resource'], resolve)
-        },
+          path: '/quhuo',
+          name: 'Quhuo',
+          component: resolve => require(['@/components/Quhuo'], resolve)
+        }
       ]
     }
   ]

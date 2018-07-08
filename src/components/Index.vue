@@ -12,9 +12,9 @@
               <router-link to="/intro" active-class="selected">趣活介绍</router-link>
               <ul class="second" @mouseover="secondShow = true" @mouseout="secondShow = false" v-show="secondShow">
                 <li><router-link to="/about" active-class="selected">关于趣活</router-link></li>
-                <li><router-link to="/architecture" active-class="selected">公司架构</router-link></li>
-                <li><router-link to="/resource" active-class="selected">趣活资源</router-link></li>
-                <li><router-link to="/business" active-class="selected">趣活业务</router-link></li>
+                <li><router-link to="/resource" active-class="selected">公司架构</router-link></li>
+                <li><router-link to="/business" active-class="selected">趣活资源</router-link></li>
+                <li><router-link to="/architecture" active-class="selected">趣活业务</router-link></li>
               </ul>
             </li>
             <li><router-link to="/clients" active-class="selected">趣活客户</router-link></li>
@@ -25,7 +25,9 @@
       </div>
     </div>
     <!-- 内容部分 -->
-      <router-view class="content" />
+    <div class="content">
+      <router-view />
+    </div>
     <!-- 底部 -->
     <div class="bottom">
       <div class="contact">
@@ -46,7 +48,7 @@ export default {
     }
   },
   mounted() {
-    this.$router.push('intro');
+    this.$router.push('quhuo');
   },
   methods: {
   },
@@ -132,7 +134,6 @@ export default {
   .bottom{
     width: 100%;
     height: 134px;
-    margin-top: 40px;
     border-top: 1px solid #f39a00;
     background-color: #ffd13d;
     font-size: 14px;
