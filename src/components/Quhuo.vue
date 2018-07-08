@@ -36,11 +36,12 @@ export default {
     return {
       mySwiper: '',
       initialSlide: 0,
-      queryList: ['about', 'resource', 'business', 'architecture']
+      queryList: ['about', 'architecture', 'resource', 'business']
     }
   },
   mounted() {
     this.Swiper();
+    this.mySwiper.slideTo(this.queryList.indexOf(this.$route.query.from) + 1, 1000, false);
     // this.mySwiper = new Swiper ('.swiper-container', {
     //   initialSlide: this.initialSlide,
     //   mousewheel: {
@@ -62,7 +63,7 @@ export default {
   watch: {
     $route(to, from) {
       console.log(this.$route.query);
-      this.initialSlide = this.queryList.indexOf(this.$route.query.from);
+      this.initialSlide = this.queryList.indexOf(this.$route.query.from) + 1;
       console.log(this.initialSlide);
       this.mySwiper.slideTo(this.initialSlide, 1000, false);
     }
