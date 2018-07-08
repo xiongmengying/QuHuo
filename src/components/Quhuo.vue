@@ -92,7 +92,7 @@ export default {
 <style>
 .swiper-container {
   width: 100%;
-  height: 689px;
+  height: 100%;
   margin-bottom: 20px;
 }
 </style>

@@ -25,7 +25,7 @@
       </div>
     </div>
     <!-- 内容部分 -->
-    <div class="content">
+    <div class="content_index">
       <router-view />
     </div>
     <!-- 底部 -->
@@ -131,8 +131,9 @@ export default {
     }
   }
   // 内容部分开始
-  .content{
-    flex: 1;
+  .content_index{
+    // flex: 1;
+    height: calc(100% - 264px);    
   }
   // 底部开始
   .bottom{
