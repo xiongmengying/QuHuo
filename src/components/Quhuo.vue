@@ -40,20 +40,21 @@ export default {
     }
   },
   mounted() {
-    this.mySwiper = new Swiper ('.swiper-container', {
-      initialSlide: this.initialSlide,
-      mousewheel: {
-        releaseOnEdges: true, // 当Swiper处于边缘位置时，Swiper释放鼠标滚轮事件，鼠标可以控制页面滚动
-      },
-      direction: 'vertical',
-      // 如果需要分页器
-      pagination: '.swiper-pagination',
-      // 如果需要前进后退按钮
-    //   nextButton: '.swiper-button-next',
-    //   prevButton: '.swiper-button-prev',
-      // 如果需要滚动条
-      scrollbar: {el: '.swiper-scrollbar',hide:true},
-    })
+    this.Swiper();
+    // this.mySwiper = new Swiper ('.swiper-container', {
+    //   initialSlide: this.initialSlide,
+    //   mousewheel: {
+    //     releaseOnEdges: true, // 当Swiper处于边缘位置时，Swiper释放鼠标滚轮事件，鼠标可以控制页面滚动
+    //   },
+    //   direction: 'vertical',
+    //   // 如果需要分页器
+    //   pagination: '.swiper-pagination',
+    //   // 如果需要前进后退按钮
+    //   // nextButton: '.swiper-button-next',
+    //   // prevButton: '.swiper-button-prev',
+    //   // 如果需要滚动条
+    //   scrollbar: {el: '.swiper-scrollbar',hide:true},
+    // })
   },
   updated() {
     this.Swiper();
@@ -68,18 +69,20 @@ export default {
   },
   methods: {
     Swiper() {
-      new Swiper ('.swiper-container', {
-        initialSlide: this.initialSlide,
-        mousewheel: true,
-        direction: 'vertical',
-        // 如果需要分页器
-        pagination: '.swiper-pagination',
-        // 如果需要前进后退按钮
-        //   nextButton: '.swiper-button-next',
-        //   prevButton: '.swiper-button-prev',
-        // 如果需要滚动条
-        //   scrollbar: '.swiper-scrollbar',
-      })
+      this.mySwiper = new Swiper ('.swiper-container', {
+      initialSlide: this.initialSlide,
+      mousewheel: {
+        releaseOnEdges: true, // 当Swiper处于边缘位置时，Swiper释放鼠标滚轮事件，鼠标可以控制页面滚动
+      },
+      direction: 'vertical',
+      // 如果需要分页器
+      pagination: '.swiper-pagination',
+      // 如果需要前进后退按钮
+      // nextButton: '.swiper-button-next',
+      // prevButton: '.swiper-button-prev',
+      // 如果需要滚动条
+      scrollbar: {el: '.swiper-scrollbar',hide:true},
+    })
     }
   }
 }
