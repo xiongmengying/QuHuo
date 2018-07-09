@@ -58,19 +58,19 @@ export default {
       display: inline-block;
       // width: 500px;
       // height: 500px;
-      width: 60%;
-      height: 70%;
+      width: 50%;
+      height: 65%;
       position: relative;
     }
     .list li{
       position: absolute;
       // font-size: 36px;
-      font-size: 1.5em;
+      font-size: 1.2em;
       color: #ffffff;
     }
     .list li:hover{
       // font-size: 40px;
-      font-size: 2em;
+      font-size: 1.3em;
       color: #ffffff;
     }
   }

@@ -59,16 +59,16 @@ export default {
     ul{
       width: 100%;
       height: 40%;
+      margin-top: 5%;
       li{
-        display: inline-block;
-        width: 30%;
-        height: 420px;
-        padding-top: 8%;
-        background-color: red;
-        margin-right: 10px;
+        float: left;
+        width: 32%;
+        height: 42%;
+        padding-top: 6%;
+        margin-left: 1%;
         p{
           line-height: 28px;
-          font-size: 28px;
+          font-size: 24px;
           color: #ffffff;
           font-weight: bold;
           margin-bottom: 5%;

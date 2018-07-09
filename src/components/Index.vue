@@ -44,7 +44,8 @@ export default {
   name: 'Index',
   data () {
     return {
-      secondShow: false
+      secondShow: false,
+      windowHeight: '',
     }
   },
   mounted() {

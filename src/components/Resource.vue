@@ -35,20 +35,20 @@ export default {
     return {
       isShow: false,
       listOne: [
-        { name: '电竞活动', left: '78', top: '0' },
-        { name: '电竞媒体', left: '78', top: '35' },
-        { name: '电竞赛事', left: '78', top: '70' },
-        { name: '电竞俱乐部', left: '58', top: '20' },
-        { name: '游戏直播平台', left: '58', top: '60' },
-        { name: '电竞媒体', left: '38', top: '45' },
+        { name: '电竞活动', left: '78', top: '10' },
+        { name: '电竞媒体', left: '78', top: '30' },
+        { name: '电竞赛事', left: '78', top: '50' },
+        { name: '电竞俱乐部', left: '48', top: '22' },
+        { name: '游戏直播平台', left: '48', top: '48' },
+        { name: '电竞媒体', left: '18', top: '35' },
       ],
       listTwo: [
-        { name: '游戏开发商', left: '5', top: '0' },
-        { name: '游戏代理商', left: '5', top: '35' },
-        { name: '游戏周边', left: '5', top: '70' },
-        { name: '游戏媒体', left: '25', top: '20' },
-        { name: '游戏直播平台', left: '25', top: '60' },
-        { name: '游戏KOL', left: '45', top: '45' }
+        { name: '游戏开发商', left: '5', top: '10' },
+        { name: '游戏代理商', left: '5', top: '30' },
+        { name: '游戏周边', left: '5', top: '50' },
+        { name: '游戏媒体', left: '35', top: '22' },
+        { name: '游戏直播平台', left: '35', top: '48' },
+        { name: '游戏KOL', left: '65', top: '35' }
       ]
     }
   },
@@ -68,16 +68,19 @@ export default {
   }
   position: relative;
   width: 100%;
-  // padding-bottom: 20px;
-  // height: 709px;
   height: 100%;
   .content{
     text-align: center;
     height:100%;
     .title, .desc{
       color: #ffffff;
-      font-size: 60px;
       font-weight: bold;
+    }
+    .title{
+      font-size: 60px;
+    }
+    .desc{
+      font-size: 28px;
     }
     .title{
       margin-bottom: 15px;
@@ -92,16 +95,17 @@ export default {
       .listOne, .imge, .listTwo{
         display: inline-block;
         // height: 400px;
-        height:100%;
+        height: 100%;
       }
       .imge{
         img{
           display: inline-block;
+          height: 100%;
           // height: 400px;
         }
       }
       .listOne, .listTwo{
-        width: 40%;
+        width: 30%;
         position: relative;
         ul{
           width: 100%;
@@ -109,16 +113,16 @@ export default {
           float: left;
           li{
             position: absolute;
-            width: 120px;
-            height: 120px;
-            line-height: 120px;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
             border-radius: 50%;
             color: #ffffff;
             font-weight: bold;
             word-wrap:break-word;
             word-break:break-all;
             p{
-              font-size: 18px;
+              font-size: 0.9em;
             }
           }
           li:hover{

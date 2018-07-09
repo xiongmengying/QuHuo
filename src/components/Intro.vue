@@ -22,7 +22,7 @@
     // bottom:0;
     margin:auto;
     width: auto;
-    padding-top: 230px;
+    padding-top: 10%;
     z-index: 99;
     text-align: center;
     overflow: hidden;

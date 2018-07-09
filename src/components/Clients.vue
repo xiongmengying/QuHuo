@@ -100,12 +100,11 @@ export default {
     font-size: 48px;
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 25px;
   }
   .carousel{
     // width: auto;
     width:80%;
-    height: 70%;
+    height: 80%;
     margin: 0 auto;
     z-index: 999;
     text-align: center;
@@ -133,9 +132,9 @@ export default {
           display: inline-block;
           // width: 20%;
           // height: 150px;
-          width:15%;
-          height:20%;
-          margin-bottom: 20px;
+          width: 22%;
+          height:30%;
+          margin-bottom: 1%;
           margin-left: 20px;
           img{
             width: 100%;
@@ -149,15 +148,13 @@ export default {
     }
     .second{
       p{
-        margin-bottom: 100px;
+        margin-bottom: 10%;
       }
       .grass{
         div{
           display: inline-block;
-          // width: 15%;
-          // height: 150px;
-          width:15%;
-          height: 20%;
+          width: 18%;
+          height: 25%;
           margin-bottom: 20px;
           margin-left: 20px;
           img{

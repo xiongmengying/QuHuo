@@ -50,10 +50,8 @@ export default {
       // margin-bottom: 20px;
     }
     .image{
-      // width: 100%;
-      // padding: 0 20px;
       width: 100%;
-      height: 85%;
+      height: 75%;
       margin: 0 auto;
       img{
         width: 100%;
