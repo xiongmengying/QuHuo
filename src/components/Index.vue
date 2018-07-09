@@ -32,7 +32,7 @@
     <div class="bottom">
       <div class="contact">
         <p class="title">CONTACT US</p>
-        <p class="mail"><img src="static/images/mail.png" />邮箱： william zhang@lfalways.com</p>
+        <p class="mail"><img src="static/images/mail.png" />邮箱： william.zhang@lfalways.com</p>
         <p class="phone"><img src="static/images/phone.png" />电话： 021-54960936</p>
       </div>
     </div>

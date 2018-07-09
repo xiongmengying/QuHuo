@@ -8,15 +8,15 @@
         <div class="content">
           <transition name="fade">
             <ul>
-              <li style="background: url('static/images/back/contact-1.jpg') no-repeat center center;background-size: cover;">
+              <li style="background: url('static/images/back/contact-1.png') no-repeat center center;background-size: cover;">
                 <p>上海</p>
                 <p>邮箱：william.zhang@lfalways.com</p>
               </li>
-              <li style="background: url('static/images/back/contact-2.jpg') no-repeat center center;background-size: cover;">
+              <li style="background: url('static/images/back/contact-2.png') no-repeat center center;background-size: cover;">
                 <p>深圳</p>
                 <p>邮箱：hannah.han@lfalways.com</p>
               </li>
-              <li style="background: url('static/images/back/contact-3.jpg') no-repeat center center;background-size: cover;">
+              <li style="background: url('static/images/back/contact-3.png') no-repeat center center;background-size: cover;">
                 <p>北京</p>
                 <p>邮箱：dana.xie@lfalways.com</p>
               </li>
@@ -66,6 +66,7 @@ export default {
         height: 42%;
         padding: 6% 0;
         margin-left: 1%;
+        background-color: rgba(0,0,0,.3);
         p{
           line-height: 28px;
           font-size: 24px;
