@@ -47,7 +47,6 @@ export default {
       font-size: 60px;
       font-weight: bold;
       color: #ffffff;
-      // margin-bottom: 20px;
     }
     .image{
       width: 100%;

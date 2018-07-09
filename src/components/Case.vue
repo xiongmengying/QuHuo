@@ -82,17 +82,14 @@ export default {
       color: #ffffff;
     }
     .list{
-      // width: 100%;
       width:80%;
       height:100%;
       margin: 0 auto;
-      // height: auto;
       margin-top: 3%;
       li{
         position: relative;
         display: inline-block;
         width: 25%;
-        // height: 200px;
         height:30%;
         margin-bottom: 20px;
         img{
@@ -116,12 +113,10 @@ export default {
           }
           p:nth-child(1){
             margin-top: 10%;
-            // font-size: 30px;
             font-size: 1em;
             font-weight: bold;
           }
           p:nth-child(2){
-            // font-size: 24px;
             font-size: 1em;
             font-weight: bold;
           }

@@ -102,7 +102,6 @@ export default {
     color: #ffffff;
   }
   .carousel{
-    // width: auto;
     width:80%;
     height: 80%;
     margin: 0 auto;
@@ -114,7 +113,6 @@ export default {
       height: 70%;
     }
     .first, .second, .third{
-      // width: 100%;     
       text-align: center;
       p{
         font-size: 32px;
@@ -130,8 +128,6 @@ export default {
       .grass{
         div{
           display: inline-block;
-          // width: 20%;
-          // height: 150px;
           width: 22%;
           height:30%;
           margin-bottom: 1%;

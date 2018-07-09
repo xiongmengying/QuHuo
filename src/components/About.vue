@@ -81,7 +81,6 @@ export default {
   position: relative;
   width: 100%;
   padding-bottom: 20px;
-  // height: 709px;
   height:100%;
   .fade-enter-active, .fade-leave-active {
     transition: opacity 1s
@@ -92,7 +91,6 @@ export default {
   .content{
     width: auto;
     height:100%;
-    // padding-top: 50px;
     padding: 1%;
     z-index: 99;
     text-align: center;
@@ -101,18 +99,14 @@ export default {
       font-size: 60px;
       font-weight: bold;
       color: #ffffff;
-      // margin-bottom: 15px;
     }
     .breif{
       height:100%;
       li{
         display: inline-block;
         width: 30%;
-        // height: 425px;
         height: 80%;
-        // margin-top: 25px;
         background-color: rgba(0, 0, 0, .6);
-        // border-radius: 15px;
         border-radius: 8px;
         .breif_li_one{
           float: left;
@@ -121,7 +115,6 @@ export default {
           text-align: center;
           color: #f89b2e;
           font-size: 66px;
-          // padding-top: 190px;
           padding-top: 18%;
         }
         .breif_li_two{
@@ -136,7 +129,6 @@ export default {
           }
         }
         .verCenter{
-          // padding: 100px 20px 0 20px;
           padding: 15% 3% 0 3%;
         }
       }

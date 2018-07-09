@@ -90,18 +90,15 @@ export default {
       height: 75%;
       margin: 0 1%;
       text-align: center;
-      // margin-top: 100px;
       background-color: rgba(0, 0, 0, .8);
       .listOne, .imge, .listTwo{
         display: inline-block;
-        // height: 400px;
         height: 100%;
       }
       .imge{
         img{
           display: inline-block;
           height: 100%;
-          // height: 400px;
         }
       }
       .listOne, .listTwo{

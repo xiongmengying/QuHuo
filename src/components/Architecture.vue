@@ -43,7 +43,6 @@ export default {
 .Resource{
   position: relative;
   width: 100%;
-  // height: 709px;
   height:100%;
   .content{
     text-align: center;
@@ -56,20 +55,16 @@ export default {
     }
     .pic{
       display: inline-block;
-      // width: 500px;
-      // height: 500px;
       width: 50%;
       height: 65%;
       position: relative;
     }
     .list li{
       position: absolute;
-      // font-size: 36px;
       font-size: 1.2em;
       color: #ffffff;
     }
     .list li:hover{
-      // font-size: 40px;
       font-size: 1.3em;
       color: #ffffff;
     }
