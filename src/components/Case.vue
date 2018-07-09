@@ -7,18 +7,18 @@
         <div class="swiper-slide">
           <div class="content">
             <p class="title">精品案例</p>
-              <transition name="fade">
-                <ul class="list" v-show="liShow">
-                    <li v-for="(item ,index) in imgLits" :key="index" @mouseover="item.isShow = true"
-                    @mouseout="item.isShow = false" :style="`left: ${item.left};top: ${item.top};`">
-                        <img :src="`static/images/business/${index + 1}.jpg`"  v-show="!item.isShow"/>
-                        <div class="detail" v-show="item.isShow">
-                            <p>{{item.detail1}}</p>
-                            <p>{{item.detail2}}</p>    
-                        </div>    
-                    </li>
-                </ul>
-              </transition>
+            <transition name="fade">
+              <ul class="list" v-show="liShow">
+                  <li v-for="(item ,index) in imgLits" :key="index" @mouseover="item.isShow = true"
+                  @mouseout="item.isShow = false" :style="`left: ${item.left};top: ${item.top};`">
+                      <img :src="`static/images/business/${index + 1}.jpg`"  v-show="!item.isShow"/>
+                      <div class="detail" v-show="item.isShow">
+                          <p>{{item.detail1}}</p>
+                          <p>{{item.detail2}}</p>    
+                      </div>    
+                  </li>
+              </ul>
+            </transition>
           </div>
         </div>
       </div>

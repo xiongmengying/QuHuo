@@ -91,7 +91,6 @@ export default {
   .content{
     width: auto;
     height:100%;
-    padding: 1%;
     z-index: 99;
     text-align: center;
     margin: 0 auto;
@@ -99,13 +98,14 @@ export default {
       font-size: 60px;
       font-weight: bold;
       color: #ffffff;
+      margin: 2% 0;
     }
     .breif{
       height:100%;
       li{
         display: inline-block;
         width: 30%;
-        height: 80%;
+        height: 70%;
         background-color: rgba(0, 0, 0, .6);
         border-radius: 8px;
         .breif_li_one{
@@ -114,8 +114,8 @@ export default {
           height: 100%;
           text-align: center;
           color: #f89b2e;
-          font-size: 66px;
-          padding-top: 18%;
+          font-size: 3.5em;
+          padding-top: 28%;
         }
         .breif_li_two{
           width: 100%;

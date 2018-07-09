@@ -45,12 +45,14 @@ export default {
     border-radius: 10px;
     .title{
       font-size: 60px;
+      margin: 2% 0;
       font-weight: bold;
       color: #ffffff;
     }
     .image{
-      width: 100%;
-      height: 75%;
+      width: 98%;
+      padding: 0 1%;
+      height: 68%;
       margin: 0 auto;
       img{
         width: 100%;

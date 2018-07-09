@@ -63,7 +63,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-@heaH: 130px;
+@heaH: 100px;
 .Index{
   a{
     color: #333333;
@@ -78,14 +78,14 @@ export default {
   // 导航条开始
   .navBar{
     width: 100%;
-    height: 130px;
+    height: 100px;
     background-color: #ffffff;
     .bar{
       width: 1200px;
       margin: 0 auto;
       .logo{
-        height: 130px;
-        line-height: 130px;
+        height: 100px;
+        line-height: 100px;
       }
       .logo{
         float: left;
@@ -134,26 +134,27 @@ export default {
   // 内容部分开始
   .content_index{
     // flex: 1;
-    height: calc(100% - 264px);    
+    height: calc(100% - 200px);    
   }
   // 底部开始
   .bottom{
     width: 100%;
-    height: 134px;
+    height: 100px;
     border-top: 1px solid #f39a00;
     background-color: #ffd13d;
     font-size: 14px;
     color: #333333;
     .contact{
       width: 300px;
-      padding-top: 30px;
+      padding-top: 20px;
       margin: 0 auto;
       text-align: center;
       .title{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
       }
       .mail, .phone{
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         img{
           width: 15px;
           height: 15px;

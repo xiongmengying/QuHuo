@@ -35,20 +35,20 @@ export default {
     return {
       isShow: false,
       listOne: [
-        { name: '电竞活动', left: '78', top: '10' },
-        { name: '电竞媒体', left: '78', top: '30' },
-        { name: '电竞赛事', left: '78', top: '50' },
-        { name: '电竞俱乐部', left: '48', top: '22' },
+        { name: '游戏开发商', left: '78', top: '10' },
+        { name: '游戏代理商', left: '78', top: '35' },
+        { name: '游戏周边', left: '78', top: '60' },
+        { name: '游戏媒体', left: '48', top: '22' },
         { name: '游戏直播平台', left: '48', top: '48' },
-        { name: '电竞媒体', left: '18', top: '35' },
+        { name: '游戏KOL', left: '18', top: '35' },
       ],
       listTwo: [
-        { name: '游戏开发商', left: '5', top: '10' },
-        { name: '游戏代理商', left: '5', top: '30' },
-        { name: '游戏周边', left: '5', top: '50' },
-        { name: '游戏媒体', left: '35', top: '22' },
+        { name: '电竞活动', left: '5', top: '10' },
+        { name: '电竞媒体', left: '5', top: '35' },
+        { name: '电竞赛事', left: '5', top: '60' },
+        { name: '电竞俱乐部', left: '35', top: '22' },
         { name: '游戏直播平台', left: '35', top: '48' },
-        { name: '游戏KOL', left: '65', top: '35' }
+        { name: '电竞媒体', left: '65', top: '35' }
       ]
     }
   },
@@ -78,16 +78,15 @@ export default {
     }
     .title{
       font-size: 60px;
+      margin-top: 2%;
     }
     .desc{
       font-size: 28px;
-    }
-    .title{
-      margin-bottom: 15px;
+      margin-bottom: 5px;
     }
     .detail{
       width: 98%;
-      height: 75%;
+      height: 70%;
       margin: 0 1%;
       text-align: center;
       background-color: rgba(0, 0, 0, .8);

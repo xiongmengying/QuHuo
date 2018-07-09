@@ -59,12 +59,12 @@ export default {
     ul{
       width: 100%;
       height: 40%;
-      margin-top: 5%;
+      margin-top: 3%;
       li{
         float: left;
         width: 32%;
         height: 42%;
-        padding-top: 6%;
+        padding: 6% 0;
         margin-left: 1%;
         p{
           line-height: 28px;

@@ -100,6 +100,7 @@ export default {
     font-size: 48px;
     font-weight: bold;
     color: #ffffff;
+    margin: 2%;
   }
   .carousel{
     width:80%;
@@ -131,7 +132,7 @@ export default {
           width: 22%;
           height:30%;
           margin-bottom: 1%;
-          margin-left: 20px;
+          margin-left: 1%;
           img{
             width: 100%;
             height: 100%;
@@ -150,9 +151,9 @@ export default {
         div{
           display: inline-block;
           width: 18%;
-          height: 25%;
-          margin-bottom: 20px;
-          margin-left: 20px;
+          height: 32%;
+          margin-bottom: 1%;
+          margin-left: 1%;
           img{
             width: 100%;
             height: 100%;
