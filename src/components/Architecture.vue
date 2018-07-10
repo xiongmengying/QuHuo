@@ -4,12 +4,14 @@
       <p class="title">趣活架构</p>
       <div class="pic" style="background: url('static/images/intro/artic.png') no-repeat center center; background-size: cover;">
         <ul class="list">
-          <li @click="showTitle(item)" v-for="(item, index) in list" :key="index" :style="`left: ${item.left}; top: ${item.top};`" :title="item.title">
+          <li @mouseover="showTitle(item)" v-for="(item, index) in list" :key="index" :style="`left: ${item.left}; top: ${item.top};`">
             {{item.name}}
           </li>
-          <div class="titleShow" v-for="(val, num) in list" :key="val.name" :style="`left: ${val.titleLeft}; top: ${val.titleTop};`" v-show="val.titleShow">
-            {{val.title}}
-          </div>
+          <transition-group name="fade">
+            <div class="titleShow" v-for="(val, num) in list" :key="val.name" :style="`left: ${val.titleLeft}; top: ${val.titleTop};background-color: ${val.titleColor};`" v-show="val.titleShow">
+              {{val.title}}
+            </div>
+          </transition-group>
         </ul>
       </div>
     </div>
@@ -24,12 +26,12 @@ export default {
     return {
       isShow: false,
       list: [
-        {name: '内容', left: '48%', top: '18%', title: '资深团队专业内容', titleLeft: '46%', titleTop: '-1%', titleShow: false },
-        {name: '设计', left: '58%', top: '33%', title: '专注专向追求真美', titleLeft: '66%', titleTop: '31%', titleShow: false },
-        {name: '运营', left: '58%', top: '62%', title: '活动组织赛事管理', titleLeft: '65%', titleTop: '62%', titleShow: false },
-        {name: '策划', left: '48%', top: '76%', title: '客户至上定制方案', titleLeft: '47%', titleTop: '87%', titleShow: false },
-        {name: '销售', left: '37%', top: '62%', title: '联络客户把握需求', titleLeft: '25%', titleTop: '62%', titleShow: false },
-        {name: '媒介', left: '37%', top: '33%', title: '把控资源挖掘价值', titleLeft: '25%', titleTop: '33%', titleShow: false }
+        {name: '内容', left: '47%', top: '10%', title: '资深团队专业内容', titleLeft: '41%', titleTop: '-1%', titleColor: '#e91d60', titleShow: false },
+        {name: '设计', left: '58%', top: '29%', title: '专注专向追求真美', titleLeft: '66%', titleTop: '31%', titleColor: '#f29dff', titleShow: false },
+        {name: '运营', left: '58%', top: '58%', title: '活动组织赛事管理', titleLeft: '65%', titleTop: '62%', titleColor: '#58d6c9', titleShow: false },
+        {name: '策划', left: '47%', top: '74%', title: '客户至上定制方案', titleLeft: '41%', titleTop: '87%', titleColor: '#ffbd41', titleShow: false },
+        {name: '销售', left: '36%', top: '60%', title: '联络客户把握需求', titleLeft: '13%', titleTop: '62%', titleColor: '#2541be', titleShow: false },
+        {name: '媒介', left: '36%', top: '29%', title: '把控资源挖掘价值', titleLeft: '13%', titleTop: '33%', titleColor: '#0da6fe', titleShow: false }
       ]
     }
   },
@@ -38,10 +40,12 @@ export default {
   },
   methods: {
     showTitle(item) {
-      item.titleShow = true;
-      setTimeout(function() {
-        item.titleShow = false;
-      }, 2500);
+      let timer = setTimeout(function () {
+        item.titleShow = true;
+        setTimeout(function() {
+          item.titleShow = false;
+        }, 2500);
+      }, 500);
     }
   }
 }
@@ -52,6 +56,12 @@ export default {
   position: relative;
   width: 100%;
   height:100%;
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 1s
+  }
+  .fade-enter, .fade-leave-active {
+    opacity: 0
+  }
   .content{
     text-align: center;
     height: 100%;
@@ -70,8 +80,12 @@ export default {
     }
     .list li{
       position: absolute;
+      width: 3rem;
+      height: 3em;
+      line-height: 3em;
       font-size: 1.2em;
       color: #ffffff;
+      cursor: pointer;
     }
     .list li:hover{
       font-size: 1.3em;
@@ -80,7 +94,10 @@ export default {
     .titleShow{
       position: absolute;
       font-size: 1.3em;
-      width: 4em;
+      width: 9em;
+      height: 2em;
+      line-height: 2em;
+      text-align: center;
       top: 43%;
       left: 44%;
       color: #ffffff;
