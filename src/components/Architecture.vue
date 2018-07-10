@@ -7,9 +7,9 @@
           <li @click="showTitle(item)" v-for="(item, index) in list" :key="index" :style="`left: ${item.left}; top: ${item.top};`" :title="item.title">
             {{item.name}}
           </li>
-          <!-- <div class="titleShow" v-for="(val, num) in list" :key="num" :style="`left: ${val.left}; top: ${val.top};`" v-show="titleShow">
-            {{titleDesc}}
-          </div> -->
+          <div class="titleShow" v-for="(val, num) in list" :key="val.name" :style="`left: ${val.titleLeft}; top: ${val.titleTop};`" v-show="val.titleShow">
+            {{val.title}}
+          </div>
         </ul>
       </div>
     </div>
@@ -23,15 +23,13 @@ export default {
   data() {
     return {
       isShow: false,
-      titleShow: false,
-      titleDesc: '',
       list: [
-        {name: '内容', left: '47%', top: '18%', title: '资深团队专业内容', titleLeft: '', titleTop: '', titleShow: false },
-        {name: '设计', left: '58%', top: '33%', title: '专注专向追求真美', titleLeft: '', titleTop: '', titleShow: false },
-        {name: '运营', left: '58%', top: '62%', title: '活动组织赛事管理', titleLeft: '', titleTop: '', titleShow: false },
-        {name: '策划', left: '47%', top: '76%', title: '客户至上定制方案', titleLeft: '', titleTop: '', titleShow: false },
-        {name: '销售', left: '37%', top: '62%', title: '联络客户把握需求', titleLeft: '', titleTop: '', titleShow: false },
-        {name: '媒介', left: '37%', top: '33%', title: '把控资源挖掘价值', titleLeft: '', titleTop: '', titleShow: false }
+        {name: '内容', left: '48%', top: '18%', title: '资深团队专业内容', titleLeft: '46%', titleTop: '-1%', titleShow: false },
+        {name: '设计', left: '58%', top: '33%', title: '专注专向追求真美', titleLeft: '66%', titleTop: '31%', titleShow: false },
+        {name: '运营', left: '58%', top: '62%', title: '活动组织赛事管理', titleLeft: '65%', titleTop: '62%', titleShow: false },
+        {name: '策划', left: '48%', top: '76%', title: '客户至上定制方案', titleLeft: '47%', titleTop: '87%', titleShow: false },
+        {name: '销售', left: '37%', top: '62%', title: '联络客户把握需求', titleLeft: '25%', titleTop: '62%', titleShow: false },
+        {name: '媒介', left: '37%', top: '33%', title: '把控资源挖掘价值', titleLeft: '25%', titleTop: '33%', titleShow: false }
       ]
     }
   },
@@ -40,11 +38,9 @@ export default {
   },
   methods: {
     showTitle(item) {
-      [this.titleDesc, this.titleShow] = [item.title, true];
-      setTimeout(function () {
-        console.log(1);
-        this.titleDesc = '';
-        this.titleShow = false;
+      item.titleShow = true;
+      setTimeout(function() {
+        item.titleShow = false;
       }, 2500);
     }
   }
@@ -87,7 +83,7 @@ export default {
       width: 4em;
       top: 43%;
       left: 44%;
-      color: #000000;
+      color: #ffffff;
       font-weight: bold;
     }
   }

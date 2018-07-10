@@ -10,8 +10,8 @@
             <transition name="fade">
               <ul class="list" v-show="liShow">
                   <li v-for="(item ,index) in imgLits" :key="index" @mouseover="item.isShow = true"
-                  @mouseout="item.isShow = false" :style="`left: ${item.left};top: ${item.top};`">
-                      <img :src="`static/images/business/${index + 1}.jpg`"  v-show="!item.isShow"/>
+                  @mouseout="item.isShow = false" :style="`background: url('static/images/business/${index + 1}.jpg') no-repeat center center;background-size: cover;`">
+                      <!-- <img :src="`static/images/business/${index + 1}.jpg`"  v-show="!item.isShow"/> -->
                       <div class="detail" v-show="item.isShow">
                           <p>{{item.detail1}}</p>
                           <p>{{item.detail2}}</p>    
@@ -87,24 +87,16 @@ export default {
       margin: 0 auto;
       margin-top: 3%;
       li{
-        position: relative;
         display: inline-block;
-        width: 25%;
+        width: 24%;
         height:30%;
         margin-bottom: 20px;
-        img{
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          left: 0;
-          top: 0;
-          z-index: 9;
-        }
+        margin-left: 1%;
         .detail{
           float: left;
           width: 100%;
           height: 100%;
-          background-color: rgba(0, 0, 0, .3);
+          background-color: rgba(0, 0, 0, .7);
           z-index: 999;
           font-size: 16px;
           p{

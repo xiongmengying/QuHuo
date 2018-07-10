@@ -52,10 +52,11 @@ export default {
     .image{
       width: 98%;
       padding: 0 1%;
+      background-color: rgba(0,0,0,.8);
       height: 68%;
       margin: 0 auto;
       img{
-        width: 100%;
+        // width: 100%;
         height: 100%;
       }
     }

@@ -6,7 +6,8 @@
       </div>
       <div class="swiper-slide">
         <p class="title">服务过的客户</p>
-        <el-carousel class="carousel" height="400px">
+        <!-- <el-carousel class="carousel" height="400px"> -->
+        <el-carousel class="carousel" :height="clientHeight">
           <el-carousel-item  class="first">
             <p>IT客户</p>
             <div class="grass">
@@ -43,6 +44,7 @@ export default {
   name: 'Clients',
   data() {
     return {
+      clientHeight: '',
       // IT客户
       ITLists: [
         { name: '英特尔', imgUrl: 'static/images/clients/IT/intel.png' },
@@ -76,6 +78,7 @@ export default {
     }
   },
   mounted() {
+    this.clientHeight = (document.body.clientHeight * 0.5) + 'px';
     new Swiper ('.swiper-container', {
       initialSlide: this.initialSlide,
       mousewheel: true,
@@ -100,7 +103,7 @@ export default {
     font-size: 48px;
     font-weight: bold;
     color: #ffffff;
-    margin: 2%;
+    margin: 2% 0 1% 0;
   }
   .carousel{
     width:80%;
@@ -116,9 +119,9 @@ export default {
     .first, .second, .third{
       text-align: center;
       p{
-        font-size: 32px;
+        font-size: 1.8em;
         color: #ffffff;
-        margin-bottom: 20px;
+        margin-bottom: 1%;
       }
       .grass{
         width: 100%;
@@ -129,13 +132,12 @@ export default {
       .grass{
         div{
           display: inline-block;
-          width: 22%;
-          height:30%;
-          margin-bottom: 1%;
+          width: 20%;
+          // height:30%;
+          // margin-bottom: 1%;
           margin-left: 1%;
           img{
             width: 100%;
-            height: 100%;
           }
         }
         div:hover{
@@ -151,12 +153,11 @@ export default {
         div{
           display: inline-block;
           width: 18%;
-          height: 32%;
+          // height: 32%;
           margin-bottom: 1%;
           margin-left: 1%;
           img{
             width: 100%;
-            height: 100%;
           }
         }
         div:hover{

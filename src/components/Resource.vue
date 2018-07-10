@@ -1,7 +1,7 @@
 <template>
   <div class="Business">
     <div class="content">
-      <p class="title">电 竞 + 游 戏</p>
+      <p class="title">游 戏 + 电 竞</p>
       <p class="desc">营 销 资 源</p>
       <transition name="fade">
       <div class="detail" v-show="isShow">
